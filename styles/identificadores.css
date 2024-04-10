@@ -1,0 +1,248 @@
+.nome-fazenda-div {
+    display: flex;
+    gap: 5px;
+}
+
+.nome-fazenda-div button {
+    padding: unset;
+}
+
+.nome-fazenda-div input {
+    width: 100%;
+}
+
+.carrinho {
+    padding: 15px;
+    overflow-y: auto;
+    width: calc(100% - 334px);
+}
+
+.carrinho-title-div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.carrinho-title-div h1 {
+    color: #5c3161;
+    font-size: 1.6rem;
+    width: 100%;
+    text-align: left;
+}
+
+.imagem-gado {
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 14px;
+}
+
+@media screen and (max-width: 810px) {
+    .carrinho-title-div {
+        flex-direction: column-reverse;
+    }
+}
+
+.proxima-etapa-button-div {
+    display: flex;
+    grid-gap: 10px;
+}
+
+.voltar-button {
+    padding: 8px 16px;
+    background-color: rgb(190, 233, 232);
+    color: rgb(92, 49, 97);
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    bottom: 25px;
+    right: 28px;
+    width: 140px;
+}
+
+.proxima-etapa-button {
+    padding: 8px 16px;
+    background-color: #5c3161;
+    color: #ffffff;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-gap: 5px;
+    cursor: pointer;
+    bottom: 25px;
+    right: 28px;
+    width: 140px;
+}
+
+@media screen and (max-width: 810px) {
+    .carrinho {
+        width: 100%;
+        flex-wrap: wrap;
+        grid-gap: unset;
+        align-items: center;
+        height: 400px;
+    }
+
+    .carrinho-table-div {
+        height: 80%;
+    }
+
+    .proxima-etapa-button-div,
+    .proxima-etapa-button {
+        width: 100%;
+    }
+
+    .proxima-etapa-button-div button {
+        width: 49%;
+    }
+
+    .voltar-button {
+        width: 49%;
+    }
+}
+
+/*INICIO CARRINHO BLOCK*/
+.carrinho-block {
+    width: 100%;
+    position: relative;
+    padding: 15px;
+    border: 1px solid #5c3161;
+    border-radius: 14px;
+    margin-bottom: 15px;
+}
+
+.thrash-div {
+    position: absolute;
+    right: 15px;
+}
+
+.form-line span:first-child {
+    font-weight: bold;
+}
+
+.form-line-logo-and-form {
+    display: flex;
+    grid-gap: 10px;
+    align-items: center;
+}
+
+.form-line-textarea {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-line-textarea textarea {
+    resize: none;
+}
+
+.logo-div {
+    width: 140px;
+    height: 140px;
+    border: 1px solid #5c3161;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-div img {
+    width: 100%;
+}
+
+.form-line-same-line {
+    display: flex;
+    grid-gap: 15px;
+}
+
+@media screen and (max-width: 430px) {
+    .form-line-logo-and-form {
+        display: flex;
+        grid-gap: 10px;
+        align-items: center;
+    }
+}
+
+/*FINAL CARRINHO BLOCK*/
+
+/*INICIO TELA DIREITA*/
+.macho-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+}
+
+.macho-div svg {
+    width: 300px;
+    height: 300px;
+}
+
+.femea-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    position: relative;
+}
+
+.femea-div svg {
+    width: 400px;
+    height: 400px;
+}
+
+/*FINAL TELA DIREITA*/
+
+/*INICIO MODAL */
+.modal {
+    position: absolute;
+    max-width: 800px;
+    padding: 25px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    background-color: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.17);
+    border-radius: 14px;
+    margin: 25px;
+}
+
+.x-button {
+    position: absolute;
+    right: 25px;
+    cursor: pointer;
+}
+
+/*FINAL MODAL*/
+
+/*INICIO NOTIFICACOES*/
+.notification {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    color: #5c3161;
+    background-color: #bee9e8;
+    border-radius: 50%;
+    font-weight: 600;
+    display: none;
+    top: -5px;
+    right: -5px;
+    font-size: 11px;
+}
+
+.notification.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-with-notification {
+    position: relative;
+}
+
+/*FINAL NOTIFICACOES*/

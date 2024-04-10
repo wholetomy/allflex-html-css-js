@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Source Sans 3', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: none;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #5c3161;
+    border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #5c3161;
+}
+
+/*INICIO ETAPAS DIV*/
+.etapas-div {
+    display: flex;
+    width: 435px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.etapas-div span {
+    background-color: #d9d9d9;
+    height: 1px;
+    width: 130px;
+}
+
+.circulo-etapa {
+    width: 45px;
+    height: 45px;
+    background-color: #d9d9d9;
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.circulo-etapa.active {
+    background-color: #5c3161;
+}
+
+@media screen and (max-width: 500px) {
+    .etapas-div {
+        display: none;
+    }
+}
+
+/*FINAL ETAPAS DIV*/
+
+/*INICIO CONTAINERS PRINCIPAIS DA TELA*/
+.pagina-container {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-gap: 5px;
+    background-color: #f8f8f8;
+}
+
+.pagina-div {
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    height: calc(100vh - 105px);
+    display: flex;
+}
+
+@media screen and (max-width: 810px) {
+    .pagina-div {
+        flex-direction: column;
+        height: unset;
+    }
+}
+
+.pagina-left {
+    padding: 15px;
+    background-color: #3f83bd;
+    color: #ffffff;
+    width: 334px;
+    border-radius: 14px;
+    height: 100%;
+    overflow-y: auto;
+    position: relative;
+}
+
+@media screen and (max-width: 810px) {
+    .pagina-left {
+        width: 100%;
+        height: 400px;
+    }
+}
+
+.pagina-right {
+    padding: 15px;
+    width: calc(100% - 334px);
+    display: flex;
+    justify-content: space-between;
+    grid-gap: 15px;
+}
+
+@media screen and (max-width: 810px) {
+    .pagina-right {
+        width: 100%;
+        flex-wrap: wrap;
+        overflow-y: auto;
+        grid-gap: unset;
+        align-items: center;
+        min-height: 400px;
+    }
+}
+
+/*FINAL CONTAINERS PRINCIPAIS DA TELA*/
+
+/*INICIO FORMS*/
+.title {
+    display: flex;
+    align-items: center;
+    grid-gap: 10px;
+}
+
+.title span {
+    background-color: #5c3161;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.title h3 {
+    font-weight: 600;
+    font-size: 21px;
+}
+
+.options-div-master {
+    max-height: calc(100% - 75px);
+    overflow-y: auto;
+}
+
+.options-div-buttons {
+    position: absolute;
+    bottom: 15px;
+    width: calc(100% - 30px);
+    display: flex;
+    justify-content: space-between;
+}
+
+.options-div {
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.options-div span {
+    font-weight: 600;
+}
+
+.options-div select,
+input {
+    height: 30px;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+}
+
+.options-div input,
+textarea {
+    padding: 0 4px;
+}
+
+.options-div input[type="file"] {
+    padding: initial;
+    height: 100%;
+}
+
+.options-div textarea {
+    resize: none;
+    width: 100%;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+}
+
+.options-div-long {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.options-div-small {
+    display: flex;
+    flex-direction: column;
+    width: 49%;
+    justify-content: flex-end;
+}
+
+.button {
+    padding: 8px 16px;
+    background-color: #5c3161;
+    color: #ffffff;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-gap: 5px;
+    cursor: pointer;
+    bottom: 25px;
+    right: 28px;
+    width: 100%;
+}
+
+.button-voltar {
+    color: #5c3161 !important;
+    background-color: #bee9e8 !important;
+}
+
+.required {
+    color: red;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+/*FINAL FORMS*/

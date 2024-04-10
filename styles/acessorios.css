@@ -1,0 +1,251 @@
+.acessorios {
+    padding: 15px;
+    width: calc(100% - 334px);
+    display: flex;
+    grid-gap: 15px;
+    flex-wrap: wrap;
+    overflow-y: auto;
+    justify-content: unset;
+}
+
+@media screen and (max-width: 810px) {
+    .acessorios {
+        width: 100%;
+        height: 400px;
+    }
+}
+
+.cards {
+    width: 300px;
+    height: 365px;
+}
+
+.cards-img-div {
+    background-color: #ffffff;
+    width: 300px;
+    height: 300px;
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(0, 0, 0, 0.17);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.cards-img-div img {
+    width: 100%;
+}
+
+.text-and-button-div {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.text-and-button-div h3 {
+    margin: 5px 0;
+}
+
+.acessorio-button {
+    width: 140px;
+    height: 30px;
+    background-color: #5c3161;
+    color: #ffffff;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-gap: 5px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 810px) {
+    .cards {
+        width: 100%;
+        height: unset;
+    }
+
+    .cards-img-div {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 400px;
+    }
+
+    .cards-img-div img {
+        object-fit: cover;
+        width: 100%;
+    }
+}
+
+
+/*INICIO MODAL*/
+.modal {
+    position: absolute;
+    max-width: 800px;
+    padding: 25px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    background-color: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.17);
+    border-radius: 14px;
+    display: none;
+}
+
+.modal.active {
+    display: block;
+}
+
+.x-button {
+    position: absolute;
+    right: 25px;
+    cursor: pointer;
+}
+
+.modal-content-div {
+    display: flex;
+    grid-gap: 25px;
+
+}
+
+.left {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.left img {
+    width: 100%;
+}
+
+.right {
+    width: 300px;
+}
+
+.right button {
+    padding: 8px 20px;
+    background-color: #5c3161;
+    color: #ffffff;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-gap: 5px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 25px;
+    right: 28px;
+}
+
+.right span {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.right h3 {
+    font-weight: 700;
+    color: #5c3161;
+    font-size: 22px;
+}
+
+@media screen and (max-width: 980px) {
+    .modal-content-div {
+        flex-direction: column;
+    }
+
+    .right {
+        min-height: 200px;
+    }
+
+    .right button {
+        margin-top: 10px;
+        position: unset;
+    }
+}
+
+/*FINAL MODAL*/
+
+/*INICIO CARRINHO NA ESQUERDA*/
+.item-carrinho {
+    width: 100%;
+    border: 1px solid #ffffff;
+    border-radius: 4px;
+    display: flex;
+    grid-gap: 10px;
+    margin-top: 10px;
+    position: relative;
+}
+
+.left-item {
+    width: 60px;
+    height: 60px;
+    border-radius: 4px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.left-item img {
+    width: 100%;
+    border-radius: 4px;
+}
+
+.right-item {
+    display: flex;
+    flex-direction: column;
+    /* grid-gap: 8px; */
+    justify-content: space-around;
+    width: 100%;
+}
+
+.right-item h3 {
+    font-size: 16px;
+    font-weight: 500;
+    width: calc(100% - 20px);
+}
+
+.right-item .buttons {
+    display: flex;
+    grid-gap: 10px;
+}
+
+.buttons div {
+    background-color: #5c3161;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: 17px;
+    height: 17px;
+    border-radius: 4px;
+}
+
+.buttons input {
+    outline: none;
+    border: none;
+    text-align: center;
+    width: 20px;
+    height: 17px;
+    border-radius: 4px;
+}
+
+.carrinho-vazio-div {
+    margin-top: 10px;
+}
+
+/*FINAL CARRINHO NA ESQUERDA*/

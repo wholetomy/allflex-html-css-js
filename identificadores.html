@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/global.css">
+    <link rel="stylesheet" href="./styles/identificadores.css">
+    <title>Identificadores Allflex</title>
+</head>
+
+<body>
+    <div class="pagina-container">
+        <div class="etapas-div">
+            <div class="circulo-etapa">1</div>
+            <span></span>
+            <div class="circulo-etapa">2</div>
+            <span></span>
+            <div class="circulo-etapa">3</div>
+        </div>
+        <div class="pagina-div">
+            <div id="paginaLeftDiv" class="pagina-left">
+                <div class="title">
+                    <span>1</span>
+                    <h3>Escolha seus identificadores</h3>
+                </div>
+                <div class='options-div-master'>
+                    <div class="options-div">
+                        <div class='options-div-long'>
+                            <span>Tipo do Identificador<span class="required">*</span></span>
+                            <select id="tipoIdentificadorDropdown">
+                                <option value="">Selecione...</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div id="opcaoIdentificadorDiv" class='options-div'>
+                        <div class='options-div-long'>
+                            <span>Opção do Identificador<span class="required">*</span></span>
+                            <select id="opcaoIdentificadorDropdown" disabled="true">
+                                <option value="">Selecione...</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div id="especieDropDownDiv" class='options-div'>
+                        <div class='options-div-long'>
+                            <span>Selecione a espécie<span class="required">*</span></span>
+                            <select id="especieDropdown" disabled="true">
+                                <option value="">Selecione...</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class='options-div'>
+                        <div class='options-div-small'>
+                            <span>Tipo de Macho<span class="required">*</span></span>
+                            <select id="tipoMachoDropdown" disabled="true">
+                                <option value="">Selecione...</option>
+                            </select>
+                        </div>
+                        <div class='options-div-small'>
+                            <span>Tipo de Fêmea<span class="required">*</span></span>
+                            <select id="tipoFemeaDropdown" disabled="true">
+                                <option value="">Selecione...</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class='options-div'>
+                        <div class='options-div-long'>
+                            <span>Tipo de gravação<span class="required">*</span></span>
+                            <select id="tipoGravacaoDropdown" disabled="true">
+                                <option value="">Selecione...</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class='options-div'>
+                        <div class='options-div-small'>
+                            <span>Cores disponíveis<span class="required">*</span></span>
+                            <select id="coresDropdown" disabled="true">
+                                <option value="">Selecione...</option>
+                            </select>
+                        </div>
+                        <div class='options-div-small'>
+                            <span>Quantidade<span class="required">*</span></span>
+                            <input id="quantidade" type="number" />
+                        </div>
+                    </div>
+                    <div class='options-div'>
+                        <div class='options-div-small'>
+                            <span>Número Inicial<span class="required">*</span></span>
+                            <input id="numeroInicial" type="number" maxlength="7" min="0" max="9999999" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
+                        </div>
+                        <div class='options-div-small'>
+                            <span>Número Final<span class="required">*</span></span>
+                            <input id="numeroFinal" type="number" maxlength="7" min="0" max="9999999" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
+                        </div>
+                    </div>                    
+                    <div class='options-div'>
+                        <div class='options-div-long'>
+                            <span>Nome da Fazenda para gravação<span class="required">*</span></span>
+                            <div class="nome-fazenda-div">
+                                <input id="nomeFazendaGravacao" type="text" maxlength="29" />
+                                <button id="curvarButton" class='button' onclick="CurvarOuDescurvarTexto()">
+                                    <img src="./images/identificadores/curve-icon.svg" alt="CarrinhoIcon" />
+                                    Curvar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='options-div'>
+                        <div class='options-div-long'>
+                            <span>Logo</span>
+                            <input id="logoFileUpload" type="file" accept=".jpg, .jpeg, .png" />
+                        </div>
+                    </div>
+                    <div class='options-div'>
+                        <div class='options-div-long'>
+                            <span>Observação</span>
+                            <textarea id="observacaoTextarea" placeholder='Explique sobre alguma personalização da sua gravação' maxlength="200"></textarea>
+                        </div>
+                    </div>                    
+                </div>
+                <div class='options-div-buttons'>
+                    <div class='options-div-small'>
+                        <button id="adicionarButton" class='button' onclick="ValidarCampos()">Adicionar</button>
+                    </div>
+                    <div class='options-div-small'>
+                        <div class='button-with-notification'>
+                            <button class='button' onclick="AbrirCarrinho()">
+                                <img src="./images/identificadores/shopping-cart-icon.svg" alt="CarrinhoIcon" />
+                                Carrinho
+                            </button>
+                            <span class='notification'>1</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="paginaRightDiv" class="pagina-right">
+                <img class='imagem-gado' src='./images/identificadores/gado-com-brinco.jpg' alt='ImagemGado' />
+                <div class='macho-div'>
+                    <h1 id="machoLabel">Macho</h1>
+                    <div class='macho-cor'></div>
+                </div>
+                <div class='femea-div'>
+                    <h1>Fêmea</h1>
+                    <div class='femea-cor'></div>
+                </div>
+            </div>
+            <div id="carrinhoDiv" class="carrinho" style="display: none;">
+                <div class='carrinho-title-div'>
+                    <h1>Carrinho</h1>
+                    <div class='proxima-etapa-button-div'>
+                        <button class='voltar-button' onclick="FecharCarrinho()">Voltar</button>
+                        <button class='proxima-etapa-button' onclick="Redirecionar('acessorios.html')">Próxima
+                            etapa</button>
+                    </div>
+                </div>
+                <div id="carrinhoTableDiv" class="carrinho-table-div"></div>
+            </div>
+        </div>
+        <div class="modal" style="display: none;">
+            <div class="modal-content">
+                <img class='x-button' src="images/acessorios/x-square.svg" onclick="FecharModal()" alt="x-button" />
+                <h3>Atenção</h3>
+                <p id="modalMessage"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./scripts/jquery.arctext.js"></script>
+    <script src="./scripts/identificadores.js" type="module"></script>
+    <script src="./scripts/global.js"></script>
+    <script src="./scripts/pym.v1.js"></script>
+    <script type="text/javascript">
+        var pymChild = new pym.Child();
+
+        function iframeLoaded() {
+            pymChild.sendHeight();
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+[
+    {
+        "cod_acessorio": 1,
+        "acessorio": "Furador Allflex",
+        "descricao": "O furador Allflex foi desenvolvido para facilitar o manejo de aplicação de identificadores. Após a perfuração e cicatrização, se realiza a aplicação do identificador. Este manejo reduz significativamente a incidência de inflamações e bicheiras na orelha do animal, aumentando a retenção. - Perfura a orelha do animal com precisão e segurança. - Furo com medida de 6mm.",
+        "imagem": "./images/acessorios/furador-allflex.jpg",
+        "st": 1
+    },
+    {
+        "cod_acessorio": 2,
+        "acessorio": "Extrator Allflex",
+        "descricao": "O Extrator da Allflex foi especialmente desenvolvido com o objetivo de facilitar a remoção de identificadores com segurança. A lâmina projetada em formato de gancho desliza facilmente entre a base do identificador macho e a orelha do animal. Medida do produto: Comprimento: 20 cm.",
+        "imagem": "./images/acessorios/extrator-allflex.jpg",
+        "st": 1
+    },
+    {
+        "cod_acessorio": 3,
+        "acessorio": "Aplicador Universal Total Tagger",
+        "descricao": "Com o modelo Universal Total Tagger é possível fazer a aplicação de todos os conjuntos de identificadores Allflex, exceto o modelo Tip Tag. Simplicidade e facilidade de manuseio. Alta durabilidade. Inclui uma agulha reserva. Medidas do produto: 22,4 cm x 14,8cm.",
+        "imagem": "./images/acessorios/aplicador-universal-tip-tag.jpg",
+        "st": 1
+    },
+    {
+        "cod_acessorio": 4,
+        "acessorio": "Aplicador Tip Tag",
+        "descricao": "Aplicador desenvolvido para aplicação de identificadores Tip Tag. Medidas do produto: 18,9cm (C) x 11,4cm (L).",
+        "imagem": "./images/acessorios/aplicador-tip-tag.jpg",
+        "st": 1
+    },
+    {
+        "cod_acessorio": 5,
+        "acessorio": "Aplicador Retract-o-matic",
+        "descricao": "Com seu mecanismo de “gatilho automático”, o aplicador Retract-o-matic retira automaticamente o pino de aplicação da orelha do animal imediatamente após a perfuração, aumentando a segurança tanto para o usuário quanto para o animal. Medidas do Produto: 23,5cm x 21,1cm.",
+        "imagem": "./images/acessorios/aplicador-recract-o-matic.jpg",
+        "st": 1
+    },
+    {
+        "cod_acessorio": 6,
+        "acessorio": "Agulha de Reposição",
+        "descricao": "As agulhas de reposição garantem uma manutenção dos aplicadores de forma simples e prática. Com isso, a qualidade nos processos de aplicação se mantém por muito mais tempo.",
+        "imagem": "./images/acessorios/agulha-reposicao.jpg",
+        "st": 1
+    },
+    {
+        "cod_acessorio": 7,
+        "acessorio": "Caneta Tag Pen",
+        "descricao": "A caneta TagPen Allflex foi especialmente fabricada para o uso em identificadores lisos (sem gravação). Tinta de altíssimo contraste garante boa visibilidade e durabilidade. Liberdade para fazer gravações personalizadas. Medidas do produto: 20,2 cm x 1 cm.",
+        "imagem": "./images/acessorios/caneta-tag-pen.jpg",
+        "st": 1
+    },
+    {
+        "cod_acessorio": 8,
+        "acessorio": "Leitor RS 420",
+        "descricao": "Leitor Tipo Bastão – sem fio. Tecnologias FDX e HDX e compatível com ISO. Bluetooth interno. Bateria interna de Li-Ion. Painel gráfico de LCD. Armazena até 10.000 IDs por sessão. Medidas do produto: 67,0cm x 6cm x 7cm",
+        "imagem": "./images/acessorios/leitor-rs-420.jpg",
+        "st": 1
+    },
+    {
+        "cod_acessorio": 9,
+        "acessorio": "Leitor AWR2502",
+        "descricao": "Leitor Tipo Bastão – sem fio. Bluetooth interno. Bateria interna de Li-Ion. Painel gráfico de LCD. Armazena até 10.000 IDs. Medidas do produto: 65,0cm x 8,5cm.",
+        "imagem": "./images/acessorios/leitor-AWR250.jpg",
+        "st": 1
+    },
+    {
+        "cod_acessorio": 10,
+        "acessorio": "Batente do Furador",
+        "descricao": "Batente do furador garante uma manutenção dos aplicadores de forma simples e prática. Com isso, a qualidade nos processos de aplicação se mantém por muito mais tempo.",
+        "imagem": "./images/acessorios/batente-furador.jpg",
+        "st": 1
+    },
+    {
+        "cod_acessorio": 11,
+        "acessorio": "Lamina do Furador",
+        "descricao": "Lâmina do furador garante uma manutenção dos aplicadores de forma simples e prática. Com isso, a qualidade nos processos de aplicação se mantém por muito mais tempo.",
+        "imagem": "./images/acessorios/lamina-furador.jpg",
+        "st": 1
+    }
+]

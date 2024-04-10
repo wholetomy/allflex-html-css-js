@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/global.css">
+    <link rel="stylesheet" href="./styles/acessorios.css">
+    <title>Acessórios</title>
+</head>
+
+<body>
+    <div class="pagina-container">
+        <div class="etapas-div">
+            <div class="circulo-etapa">1</div>
+            <span></span>
+            <div class="circulo-etapa">2</div>
+            <span></span>
+            <div class="circulo-etapa">3</div>
+        </div>
+        <div class="pagina-div">
+            <div class="pagina-left">
+                <div class='title'>
+                    <span>2</span>
+                    <h3>Escolha seus acessórios</h3>
+                </div>
+                <div id="acessoriosDiv" class="options-div-master acessoriosDiv-div"></div>
+                <div class='options-div-buttons'>
+                    <div class='options-div-small'>
+                        <button onclick="Redirecionar('identificadores.html')" class='button button-voltar'>Voltar</button>
+                    </div>
+                    <div class='options-div-small'>
+                        <button onclick="Redirecionar('finalizacao.html')" class='button button-proxima-etapa'>Próxima etapa</button>
+                    </div>
+                </div>
+            </div>
+            <div id="acessoriosRight" class="acessorios"></div>
+        </div>
+        <div id="modal" class="modal"></div>
+    </div>
+    <script src="./scripts/acessorios.js"></script>
+    <script src="./scripts/global.js"></script>
+    <script src="./scripts/pym.v1.js"></script>
+    <script type="text/javascript">
+        var pymChild = new pym.Child();
+
+        function iframeLoaded() {
+            pymChild.sendHeight();
+        }
+    </script>
+</body>
+
+</html>

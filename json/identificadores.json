@@ -1,0 +1,1000 @@
+{
+    "data": {
+        "tipo_identificador": [
+            {
+                "cod_tipo_identificador": 1,
+                "tipo_identificador": "Eletrônico",
+                "st": 1
+            },
+            {
+                "cod_tipo_identificador": 2,
+                "tipo_identificador": "Visual/Manejo",
+                "st": 1
+            }
+        ],
+        "opcao_identificador": [
+            {
+                "cod_opcao_identificador": 1,
+                "opcao_identificador": "Inviolável",
+                "st": 1
+            },
+            {
+                "cod_opcao_identificador": 1,
+                "opcao_identificador": "Reutilizável",
+                "st": 1
+            }
+        ],
+        "especie": [
+            {
+                "cod_especie": 1,
+                "especie": "Bovino",
+                "cod_tipo_identificador": 2,
+                "st": 1
+            },
+            {
+                "cod_especie": 2,
+                "especie": "Ovino/Caprino/Suíno",
+                "cod_tipo_identificador": 2,
+                "st": 1
+            },
+            {
+                "cod_especie": 3,
+                "especie": "Não aplicável",
+                "cod_tipo_identificador": 1,
+                "st": 1
+            },
+            {
+                "cod_especie": 4,
+                "especie": "Bovino mais vendido para corte",
+                "cod_tipo_identificador": 2,
+                "st": 1
+            },
+            {
+                "cod_especie": 5,
+                "especie": "Bovino mais vendido para leite",
+                "cod_tipo_identificador": 2,
+                "st": 1
+            }
+        ],
+        "macho": [
+            {
+                "cod_macho": 1,
+                "macho": "Pequeno Longo",
+                "cod_especie": 3,
+                "st": 1
+            },
+            {
+                "cod_macho": 2,
+                "macho": "Médio",
+                "cod_especie": 3,
+                "st": 1
+            },
+            {
+                "cod_macho": 3,
+                "macho": "Grande",
+                "cod_especie": 3,
+                "st": 1
+            },
+            {
+                "cod_macho": 4,
+                "macho": "Pequeno Curto",
+                "cod_especie": 1,
+                "st": 1
+            },
+            {
+                "cod_macho": 5,
+                "macho": "Pequeno Curto Avulso",
+                "cod_especie": 1,
+                "st": 1
+            },
+            {
+                "cod_macho": 6,
+                "macho": "Pequeno Longo",
+                "cod_especie": 1,
+                "st": 1
+            },
+            {
+                "cod_macho": 7,
+                "macho": "Pequeno Longo Avulso",
+                "cod_especie": 1,
+                "st": 1
+            },
+            {
+                "cod_macho": 8,
+                "macho": "Médio",
+                "cod_especie": 1,
+                "st": 1
+            },
+            {
+                "cod_macho": 9,
+                "macho": "Grande",
+                "cod_especie": 1,
+                "st": 1
+            },
+            {
+                "cod_macho": 10,
+                "macho": "Maxi",
+                "cod_especie": 1,
+                "st": 1
+            },
+            {
+                "cod_macho": 11,
+                "macho": "Pequeno Curto",
+                "cod_especie": 2,
+                "st": 1
+            },
+            {
+                "cod_macho": 12,
+                "macho": "Ovino/Caprino",
+                "cod_especie": 2,
+                "st": 1
+            },
+            {
+                "cod_macho": 13,
+                "macho": "Tip Tag",
+                "cod_especie": 2,
+                "st": 1
+            },
+            {
+                "cod_macho": 14,
+                "macho": "Pequeno Curto",
+                "cod_especie": 4,
+                "st": 1
+            },
+            {
+                "cod_macho": 15,
+                "macho": "Grande",
+                "cod_especie": 5,
+                "st": 1
+            }
+        ],
+        "femea": [
+            {
+                "cod_femea": 1,
+                "femea": "FDX (recomendado para gado de corte)",
+                "st": 1
+            },
+            {
+                "cod_femea": 2,
+                "femea": "HDX (recomendado para gado de leite)",
+                "st": 1
+            },
+            {
+                "cod_femea": 3,
+                "femea": "Pequena",
+                "st": 1
+            },
+            {
+                "cod_femea": 4,
+                "femea": "Grande",
+                "st": 1
+            },
+            {
+                "cod_femea": 5,
+                "femea": "Média",
+                "st": 1
+            },
+            {
+                "cod_femea": 6,
+                "femea": "Maxi",
+                "st": 1
+            },
+            {
+                "cod_femea": 7,
+                "femea": "Ovino/Caprino",
+                "st": 1
+            },
+            {
+                "cod_femea": 8,
+                "femea": "Suíno/Ovino",
+                "st": 1
+            },
+            {
+                "cod_femea": 9,
+                "femea": "Não aplicável",
+                "st": 1
+            },
+            {
+                "cod_femea": 10,
+                "femea": "Não necessário",
+                "st": 1
+            }
+        ],
+        "tipo_gravacao": [
+            {
+                "cod_tipo_gravacao": 2,
+                "tipo_gravacao": "Fêmea numerada",
+                "st": 1
+            },
+            {
+                "cod_tipo_gravacao": 3,
+                "tipo_gravacao": "Fêmea com logo",
+                "st": 1
+            },
+            {
+                "cod_tipo_gravacao": 4,
+                "tipo_gravacao": "Macho e fêmea gravados",
+                "st": 1
+            },
+            {
+                "cod_tipo_gravacao": 5,
+                "tipo_gravacao": "Liso",
+                "st": 1
+            },
+            {
+                "cod_tipo_gravacao": 1,
+                "tipo_gravacao": "Com logo",
+                "st": 1
+            },
+            {
+                "cod_tipo_gravacao": 6,
+                "tipo_gravacao": "Numerado",
+                "st": 1
+            }
+        ],
+        "machos_femeas_depara": [
+            {
+                "cod_depara": 1,
+                "cod_femea": 1,
+                "cod_macho": 1
+            },
+            {
+                "cod_depara": 2,
+                "cod_femea": 2,
+                "cod_macho": 1
+            },
+            {
+                "cod_depara": 3,
+                "cod_femea": 1,
+                "cod_macho": 2
+            },
+            {
+                "cod_depara": 4,
+                "cod_femea": 2,
+                "cod_macho": 2
+            },
+            {
+                "cod_depara": 5,
+                "cod_femea": 1,
+                "cod_macho": 3
+            },
+            {
+                "cod_depara": 6,
+                "cod_femea": 2,
+                "cod_macho": 3
+            },
+            {
+                "cod_depara": 7,
+                "cod_femea": 3,
+                "cod_macho": 4
+            },
+            {
+                "cod_depara": 8,
+                "cod_femea": 9,
+                "cod_macho": 5
+            },
+            {
+                "cod_depara": 9,
+                "cod_femea": 4,
+                "cod_macho": 6
+            },
+            {
+                "cod_depara": 10,
+                "cod_femea": 5,
+                "cod_macho": 6
+            },
+            {
+                "cod_depara": 11,
+                "cod_femea": 6,
+                "cod_macho": 6
+            },
+            {
+                "cod_depara": 12,
+                "cod_femea": 9,
+                "cod_macho": 7
+            },
+            {
+                "cod_depara": 13,
+                "cod_femea": 4,
+                "cod_macho": 8
+            },
+            {
+                "cod_depara": 14,
+                "cod_femea": 5,
+                "cod_macho": 8
+            },
+            {
+                "cod_depara": 15,
+                "cod_femea": 6,
+                "cod_macho": 8
+            },
+            {
+                "cod_depara": 16,
+                "cod_femea": 4,
+                "cod_macho": 9
+            },
+            {
+                "cod_depara": 17,
+                "cod_femea": 6,
+                "cod_macho": 9
+            },
+            {
+                "cod_depara": 18,
+                "cod_femea": 6,
+                "cod_macho": 10
+            },
+            {
+                "cod_depara": 19,
+                "cod_femea": 3,
+                "cod_macho": 11
+            },
+            {
+                "cod_depara": 20,
+                "cod_femea": 7,
+                "cod_macho": 11
+            },
+            {
+                "cod_depara": 21,
+                "cod_femea": 8,
+                "cod_macho": 11
+            },
+            {
+                "cod_depara": 22,
+                "cod_femea": 7,
+                "cod_macho": 12
+            },
+            {
+                "cod_depara": 23,
+                "cod_femea": 8,
+                "cod_macho": 12
+            },
+            {
+                "cod_depara": 24,
+                "cod_femea": 10,
+                "cod_macho": 13
+            },
+            {
+                "cod_depara": 25,
+                "cod_femea": 4,
+                "cod_macho": 14
+            },
+            {
+                "cod_depara": 26,
+                "cod_femea": 4,
+                "cod_macho": 15
+            }
+        ],
+        "femeas_tipo_gravacoes_depara": [
+            {
+                "cod_depara": 1,
+                "cod_femea": 1,
+                "cod_tipo_gravacao": 2
+            },
+            {
+                "cod_depara": 2,
+                "cod_femea": 1,
+                "cod_tipo_gravacao": 3
+            },
+            {
+                "cod_depara": 3,
+                "cod_femea": 1,
+                "cod_tipo_gravacao": 4
+            },
+            {
+                "cod_depara": 4,
+                "cod_femea": 2,
+                "cod_tipo_gravacao": 2
+            },
+            {
+                "cod_depara": 5,
+                "cod_femea": 2,
+                "cod_tipo_gravacao": 3
+            },
+            {
+                "cod_depara": 6,
+                "cod_femea": 2,
+                "cod_tipo_gravacao": 4
+            },
+            {
+                "cod_depara": 7,
+                "cod_femea": 3,
+                "cod_tipo_gravacao": 2
+            },
+            {
+                "cod_depara": 8,
+                "cod_femea": 3,
+                "cod_tipo_gravacao": 3
+            },
+            {
+                "cod_depara": 9,
+                "cod_femea": 3,
+                "cod_tipo_gravacao": 4
+            },
+            {
+                "cod_depara": 10,
+                "cod_femea": 3,
+                "cod_tipo_gravacao": 5
+            },
+            {
+                "cod_depara": 11,
+                "cod_femea": 9,
+                "cod_tipo_gravacao": 5
+            },
+            {
+                "cod_depara": 12,
+                "cod_femea": 5,
+                "cod_tipo_gravacao": 2
+            },
+            {
+                "cod_depara": 13,
+                "cod_femea": 5,
+                "cod_tipo_gravacao": 3
+            },
+            {
+                "cod_depara": 14,
+                "cod_femea": 5,
+                "cod_tipo_gravacao": 4
+            },
+            {
+                "cod_depara": 15,
+                "cod_femea": 5,
+                "cod_tipo_gravacao": 5
+            },
+            {
+                "cod_depara": 16,
+                "cod_femea": 4,
+                "cod_tipo_gravacao": 2
+            },
+            {
+                "cod_depara": 17,
+                "cod_femea": 4,
+                "cod_tipo_gravacao": 3
+            },
+            {
+                "cod_depara": 18,
+                "cod_femea": 4,
+                "cod_tipo_gravacao": 4
+            },
+            {
+                "cod_depara": 19,
+                "cod_femea": 4,
+                "cod_tipo_gravacao": 5
+            },
+            {
+                "cod_depara": 20,
+                "cod_femea": 6,
+                "cod_tipo_gravacao": 2
+            },
+            {
+                "cod_depara": 21,
+                "cod_femea": 6,
+                "cod_tipo_gravacao": 3
+            },
+            {
+                "cod_depara": 22,
+                "cod_femea": 6,
+                "cod_tipo_gravacao": 4
+            },
+            {
+                "cod_depara": 23,
+                "cod_femea": 6,
+                "cod_tipo_gravacao": 5
+            },
+            {
+                "cod_depara": 24,
+                "cod_femea": 7,
+                "cod_tipo_gravacao": 2
+            },
+            {
+                "cod_depara": 25,
+                "cod_femea": 7,
+                "cod_tipo_gravacao": 3
+            },
+            {
+                "cod_depara": 26,
+                "cod_femea": 7,
+                "cod_tipo_gravacao": 4
+            },
+            {
+                "cod_depara": 27,
+                "cod_femea": 7,
+                "cod_tipo_gravacao": 5
+            },
+            {
+                "cod_depara": 28,
+                "cod_femea": 8,
+                "cod_tipo_gravacao": 2
+            },
+            {
+                "cod_depara": 29,
+                "cod_femea": 8,
+                "cod_tipo_gravacao": 3
+            },
+            {
+                "cod_depara": 30,
+                "cod_femea": 8,
+                "cod_tipo_gravacao": 4
+            },
+            {
+                "cod_depara": 31,
+                "cod_femea": 8,
+                "cod_tipo_gravacao": 5
+            },
+            {
+                "cod_depara": 33,
+                "cod_femea": 10,
+                "cod_tipo_gravacao": 5
+            },
+            {
+                "cod_depara": 34,
+                "cod_femea": 10,
+                "cod_tipo_gravacao": 6
+            }
+        ],
+        "cores_machos_depara": [
+            {
+                "cod_depara": 1,
+                "cod_cor": 1,
+                "cod_macho": 1
+            },
+            {
+                "cod_depara": 2,
+                "cod_cor": 1,
+                "cod_macho": 2
+            },
+            {
+                "cod_depara": 3,
+                "cod_cor": 1,
+                "cod_macho": 3
+            },
+            {
+                "cod_depara": 4,
+                "cod_cor": 1,
+                "cod_macho": 4
+            },
+            {
+                "cod_depara": 5,
+                "cod_cor": 1,
+                "cod_macho": 5
+            },
+            {
+                "cod_depara": 6,
+                "cod_cor": 1,
+                "cod_macho": 6
+            },
+            {
+                "cod_depara": 7,
+                "cod_cor": 1,
+                "cod_macho": 7
+            },
+            {
+                "cod_depara": 8,
+                "cod_cor": 1,
+                "cod_macho": 8
+            },
+            {
+                "cod_depara": 9,
+                "cod_cor": 1,
+                "cod_macho": 9
+            },
+            {
+                "cod_depara": 10,
+                "cod_cor": 1,
+                "cod_macho": 10
+            },
+            {
+                "cod_depara": 11,
+                "cod_cor": 1,
+                "cod_macho": 11
+            },
+            {
+                "cod_depara": 12,
+                "cod_cor": 1,
+                "cod_macho": 12
+            },
+            {
+                "cod_depara": 13,
+                "cod_cor": 1,
+                "cod_macho": 13
+            },
+            {
+                "cod_depara": 14,
+                "cod_cor": 2,
+                "cod_macho": 1
+            },
+            {
+                "cod_depara": 15,
+                "cod_cor": 2,
+                "cod_macho": 2
+            },
+            {
+                "cod_depara": 16,
+                "cod_cor": 2,
+                "cod_macho": 3
+            },
+            {
+                "cod_depara": 17,
+                "cod_cor": 2,
+                "cod_macho": 4
+            },
+            {
+                "cod_depara": 18,
+                "cod_cor": 2,
+                "cod_macho": 5
+            },
+            {
+                "cod_depara": 19,
+                "cod_cor": 2,
+                "cod_macho": 6
+            },
+            {
+                "cod_depara": 20,
+                "cod_cor": 2,
+                "cod_macho": 7
+            },
+            {
+                "cod_depara": 21,
+                "cod_cor": 2,
+                "cod_macho": 8
+            },
+            {
+                "cod_depara": 22,
+                "cod_cor": 2,
+                "cod_macho": 9
+            },
+            {
+                "cod_depara": 23,
+                "cod_cor": 2,
+                "cod_macho": 11
+            },
+            {
+                "cod_depara": 24,
+                "cod_cor": 2,
+                "cod_macho": 12
+            },
+            {
+                "cod_depara": 25,
+                "cod_cor": 2,
+                "cod_macho": 13
+            },
+            {
+                "cod_depara": 26,
+                "cod_cor": 3,
+                "cod_macho": 1
+            },
+            {
+                "cod_depara": 27,
+                "cod_cor": 3,
+                "cod_macho": 2
+            },
+            {
+                "cod_depara": 28,
+                "cod_cor": 3,
+                "cod_macho": 3
+            },
+            {
+                "cod_depara": 29,
+                "cod_cor": 3,
+                "cod_macho": 4
+            },
+            {
+                "cod_depara": 30,
+                "cod_cor": 3,
+                "cod_macho": 5
+            },
+            {
+                "cod_depara": 31,
+                "cod_cor": 3,
+                "cod_macho": 6
+            },
+            {
+                "cod_depara": 32,
+                "cod_cor": 3,
+                "cod_macho": 7
+            },
+            {
+                "cod_depara": 33,
+                "cod_cor": 3,
+                "cod_macho": 8
+            },
+            {
+                "cod_depara": 34,
+                "cod_cor": 3,
+                "cod_macho": 9
+            },
+            {
+                "cod_depara": 35,
+                "cod_cor": 3,
+                "cod_macho": 11
+            },
+            {
+                "cod_depara": 36,
+                "cod_cor": 3,
+                "cod_macho": 12
+            },
+            {
+                "cod_depara": 37,
+                "cod_cor": 3,
+                "cod_macho": 13
+            },
+            {
+                "cod_depara": 38,
+                "cod_cor": 4,
+                "cod_macho": 1
+            },
+            {
+                "cod_depara": 39,
+                "cod_cor": 4,
+                "cod_macho": 2
+            },
+            {
+                "cod_depara": 40,
+                "cod_cor": 4,
+                "cod_macho": 3
+            },
+            {
+                "cod_depara": 41,
+                "cod_cor": 4,
+                "cod_macho": 4
+            },
+            {
+                "cod_depara": 42,
+                "cod_cor": 4,
+                "cod_macho": 5
+            },
+            {
+                "cod_depara": 43,
+                "cod_cor": 4,
+                "cod_macho": 6
+            },
+            {
+                "cod_depara": 44,
+                "cod_cor": 4,
+                "cod_macho": 7
+            },
+            {
+                "cod_depara": 45,
+                "cod_cor": 4,
+                "cod_macho": 8
+            },
+            {
+                "cod_depara": 46,
+                "cod_cor": 4,
+                "cod_macho": 9
+            },
+            {
+                "cod_depara": 47,
+                "cod_cor": 4,
+                "cod_macho": 11
+            },
+            {
+                "cod_depara": 48,
+                "cod_cor": 4,
+                "cod_macho": 12
+            },
+            {
+                "cod_depara": 49,
+                "cod_cor": 4,
+                "cod_macho": 13
+            },
+            {
+                "cod_depara": 50,
+                "cod_cor": 5,
+                "cod_macho": 1
+            },
+            {
+                "cod_depara": 51,
+                "cod_cor": 5,
+                "cod_macho": 2
+            },
+            {
+                "cod_depara": 52,
+                "cod_cor": 5,
+                "cod_macho": 3
+            },
+            {
+                "cod_depara": 53,
+                "cod_cor": 5,
+                "cod_macho": 4
+            },
+            {
+                "cod_depara": 54,
+                "cod_cor": 5,
+                "cod_macho": 5
+            },
+            {
+                "cod_depara": 55,
+                "cod_cor": 5,
+                "cod_macho": 6
+            },
+            {
+                "cod_depara": 56,
+                "cod_cor": 5,
+                "cod_macho": 7
+            },
+            {
+                "cod_depara": 57,
+                "cod_cor": 5,
+                "cod_macho": 8
+            },
+            {
+                "cod_depara": 58,
+                "cod_cor": 5,
+                "cod_macho": 9
+            },
+            {
+                "cod_depara": 59,
+                "cod_cor": 5,
+                "cod_macho": 11
+            },
+            {
+                "cod_depara": 60,
+                "cod_cor": 5,
+                "cod_macho": 12
+            },
+            {
+                "cod_depara": 61,
+                "cod_cor": 5,
+                "cod_macho": 13
+            },
+            {
+                "cod_depara": 62,
+                "cod_cor": 6,
+                "cod_macho": 1
+            },
+            {
+                "cod_depara": 63,
+                "cod_cor": 6,
+                "cod_macho": 2
+            },
+            {
+                "cod_depara": 64,
+                "cod_cor": 6,
+                "cod_macho": 3
+            },
+            {
+                "cod_depara": 65,
+                "cod_cor": 6,
+                "cod_macho": 4
+            },
+            {
+                "cod_depara": 66,
+                "cod_cor": 6,
+                "cod_macho": 5
+            },
+            {
+                "cod_depara": 67,
+                "cod_cor": 6,
+                "cod_macho": 6
+            },
+            {
+                "cod_depara": 68,
+                "cod_cor": 6,
+                "cod_macho": 7
+            },
+            {
+                "cod_depara": 69,
+                "cod_cor": 6,
+                "cod_macho": 8
+            },
+            {
+                "cod_depara": 70,
+                "cod_cor": 6,
+                "cod_macho": 9
+            },
+            {
+                "cod_depara": 71,
+                "cod_cor": 6,
+                "cod_macho": 11
+            },
+            {
+                "cod_depara": 72,
+                "cod_cor": 6,
+                "cod_macho": 12
+            },
+            {
+                "cod_depara": 73,
+                "cod_cor": 6,
+                "cod_macho": 13
+            },
+            {
+                "cod_depara": 74,
+                "cod_cor": 1,
+                "cod_macho": 14
+            },
+            {
+                "cod_depara": 75,
+                "cod_cor": 2,
+                "cod_macho": 14
+            },
+            {
+                "cod_depara": 76,
+                "cod_cor": 3,
+                "cod_macho": 14
+            },
+            {
+                "cod_depara": 77,
+                "cod_cor": 4,
+                "cod_macho": 14
+            },
+            {
+                "cod_depara": 78,
+                "cod_cor": 5,
+                "cod_macho": 14
+            },
+            {
+                "cod_depara": 79,
+                "cod_cor": 6,
+                "cod_macho": 14
+            },
+            {
+                "cod_depara": 80,
+                "cod_cor": 1,
+                "cod_macho": 15
+            },
+            {
+                "cod_depara": 81,
+                "cod_cor": 2,
+                "cod_macho": 15
+            },
+            {
+                "cod_depara": 82,
+                "cod_cor": 3,
+                "cod_macho": 15
+            },
+            {
+                "cod_depara": 83,
+                "cod_cor": 4,
+                "cod_macho": 15
+            },
+            {
+                "cod_depara": 84,
+                "cod_cor": 5,
+                "cod_macho": 15
+            },
+            {
+                "cod_depara": 85,
+                "cod_cor": 6,
+                "cod_macho": 15
+            }
+        ],
+        "cores": [
+            {
+                "cod_cores": 1,
+                "hex": "#EEEE22",
+                "cores": "Amarelo",
+                "st": 1
+            },
+            {
+                "cod_cores": 2,
+                "hex": "#248FA1",
+                "cores": "Azul",
+                "st": 1
+            },
+            {
+                "cod_cores": 3,
+                "hex": "#B7B3A8",
+                "cores": "Branco",
+                "st": 1
+            },
+            {
+                "cod_cores": 4,
+                "hex": "#C36421",
+                "cores": "Laranja",
+                "st": 1
+            },
+            {
+                "cod_cores": 5,
+                "hex": "#82AA62",
+                "cores": "Verde",
+                "st": 1
+            },
+            {
+                "cod_cores": 6,
+                "hex": "#BA231C",
+                "cores": "Vermelho",
+                "st": 1
+            }
+        ]
+    }
+}
