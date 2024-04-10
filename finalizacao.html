@@ -37,36 +37,36 @@
                     <div class='options-div'>
                         <div class='options-div-small'>
                             <span data-fieldname="cnpjCpf">Digite seu CNPJ/CPF<span class="required">*</span></span>
-                            <input type="text" name="cnpjCpf" onChange={handleChange} />
+                            <input type="text" name="cnpjCpf" onChange={handleChange} maxlength="30" />
                         </div>
                         <div class='options-div-small'>
                             <span>Inscrição Estadual</span>
-                            <input type="text" name="inscricaoEstadual" />
+                            <input type="text" name="inscricaoEstadual" maxlength="30" />
                         </div>
                     </div>
                     <div class='options-div'>
                         <div class='options-div-long'>
                             <span data-fieldname="nomeFazenda">Nome da fazenda<span class="required">*</span></span>
-                            <input type="text" name="nomeFazenda" />
+                            <input type="text" name="nomeFazenda" maxlength="29" />
                         </div>
                     </div>
                     <div class='options-div'>
                         <div class='options-div-long'>
                             <span data-fieldname="telefone">Digite seu telefone<span class="required">*</span></span>
-                            <input type="text" name='telefone' />
+                            <input type="text" name='telefone' maxlength="20" />
                         </div>
                     </div>
                     <div class='options-div'>
                         <div class='options-div-long'>
                             <span data-fieldname="email">Digite seu e-mail<span class="required">*</span></span>
-                            <input type="text" name="email" />
+                            <input type="text" name="email" maxlength="100" />
                         </div>
                     </div>
                     <div class='options-div'>
                         <div class='options-div-long'>
                             <span>Observações sobre o pedido</span>
                             <textarea rows="4" name="observacoes"
-                                placeholder='Escreva observações finais sobre seu orçamento'></textarea>
+                                placeholder='Escreva observações finais sobre seu orçamento' maxlength="200"></textarea>
                         </div>
                     </div>
                 </div>
