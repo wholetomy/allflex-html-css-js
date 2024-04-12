@@ -76,19 +76,19 @@ export const MachoGrandeSVG = (text, uploadedFile, initialNumber, typeRecording)
 
         let text2 = document.createElementNS("http://www.w3.org/2000/svg", "text");
         text2.setAttribute("x", "50%");
-        text2.setAttribute("y", "91%");
+        text2.setAttribute("y", "85%");
         text2.setAttribute("dominant-baseline", "middle");
         text2.setAttribute("text-anchor", "middle");
         text2.setAttribute("fill", "black");
         text2.setAttribute("font-weight", "bold");
-        text2.setAttribute("font-size", "280");
+        text2.setAttribute("font-size", "650");
         text2.textContent = initialNumber;
         svgElement.appendChild(text2);
 
         if (uploadedFile) {
             let image = document.createElementNS("http://www.w3.org/2000/svg", "image");
             image.setAttribute("x", "35%");
-            image.setAttribute("y", "60%");
+            image.setAttribute("y", "40%");
             image.setAttribute("width", "500px");
             image.setAttribute("height", "500px");
             image.setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", uploadedFile);
@@ -213,12 +213,12 @@ export const MachoMaxiSVG = (text, uploadedFile, initialNumber, typeRecording) =
         // Adicionar número inicial ao SVG
         let text2 = document.createElementNS("http://www.w3.org/2000/svg", "text");
         text2.setAttribute("x", "50%");
-        text2.setAttribute("y", "91%");
+        text2.setAttribute("y", "85%");
         text2.setAttribute("dominant-baseline", "middle");
         text2.setAttribute("text-anchor", "middle");
         text2.setAttribute("fill", "black");
         text2.setAttribute("font-weight", "bold");
-        text2.setAttribute("font-size", "280");
+        text2.setAttribute("font-size", "650");
         text2.textContent = initialNumber;
         svgElement.appendChild(text2);
 
@@ -226,7 +226,7 @@ export const MachoMaxiSVG = (text, uploadedFile, initialNumber, typeRecording) =
         if (uploadedFile) {
             let image = document.createElementNS("http://www.w3.org/2000/svg", "image");
             image.setAttribute("x", "35%");
-            image.setAttribute("y", "60%");
+            image.setAttribute("y", "40%");
             image.setAttribute("width", "500px");
             image.setAttribute("height", "500px");
             image.setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", uploadedFile);
@@ -351,12 +351,12 @@ export const MachoMedioSVG = (text, uploadedFile, initialNumber, typeRecording) 
         // Adicionar número inicial ao SVG
         let text2 = document.createElementNS("http://www.w3.org/2000/svg", "text");
         text2.setAttribute("x", "50%");
-        text2.setAttribute("y", "91%");
+        text2.setAttribute("y", "85%");
         text2.setAttribute("dominant-baseline", "middle");
         text2.setAttribute("text-anchor", "middle");
         text2.setAttribute("fill", "black");
         text2.setAttribute("font-weight", "bold");
-        text2.setAttribute("font-size", "280");
+        text2.setAttribute("font-size", "650");
         text2.textContent = initialNumber;
         svgElement.appendChild(text2);
 
@@ -364,7 +364,7 @@ export const MachoMedioSVG = (text, uploadedFile, initialNumber, typeRecording) 
         if (uploadedFile) {
             let image = document.createElementNS("http://www.w3.org/2000/svg", "image");
             image.setAttribute("x", "42%");
-            image.setAttribute("y", "62%");
+            image.setAttribute("y", "42%");
             image.setAttribute("width", "280px");
             image.setAttribute("height", "280px");
             image.setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", uploadedFile);
@@ -489,12 +489,12 @@ export const MachoOvinoCaprinoSVG = (text, uploadedFile, initialNumber, typeReco
         // Adicionar número inicial ao SVG
         let text2 = document.createElementNS("http://www.w3.org/2000/svg", "text");
         text2.setAttribute("x", "50%");
-        text2.setAttribute("y", "91%");
+        text2.setAttribute("y", "85%");
         text2.setAttribute("dominant-baseline", "middle");
         text2.setAttribute("text-anchor", "middle");
         text2.setAttribute("fill", "black");
         text2.setAttribute("font-weight", "bold");
-        text2.setAttribute("font-size", "280");
+        text2.setAttribute("font-size", "650");
         text2.textContent = initialNumber;
         svgElement.appendChild(text2);
 
@@ -502,7 +502,7 @@ export const MachoOvinoCaprinoSVG = (text, uploadedFile, initialNumber, typeReco
         if (uploadedFile) {
             let image = document.createElementNS("http://www.w3.org/2000/svg", "image");
             image.setAttribute("x", "42%");
-            image.setAttribute("y", "62%");
+            image.setAttribute("y", "42%");
             image.setAttribute("width", "280px");
             image.setAttribute("height", "280px");
             image.setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", uploadedFile);

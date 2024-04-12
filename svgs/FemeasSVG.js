@@ -199,7 +199,7 @@ export const FemGrandeSVG = (text, uploadedFile, initialNumber, typeRecording) =
         textElement.textContent = text;
         textElement.style.fill = "black";
         textElement.style.fontWeight = "bold";
-        textElement.style.fontSize = "96px";
+        textElement.style.fontSize = "150px";
         textElement.id = 'textoCurvadoFemea';
         div.appendChild(textElement);
         foreignObject.appendChild(div);
@@ -207,19 +207,19 @@ export const FemGrandeSVG = (text, uploadedFile, initialNumber, typeRecording) =
 
         let textElement2 = document.createElementNS("http://www.w3.org/2000/svg", "text");
         textElement2.setAttribute("x", "50%");
-        textElement2.setAttribute("y", "91%");
+        textElement2.setAttribute("y", "85%");
         textElement2.setAttribute("dominant-baseline", "middle");
         textElement2.setAttribute("text-anchor", "middle");
         textElement2.setAttribute("fill", "black");
         textElement2.setAttribute("font-weight", "bold");
-        textElement2.setAttribute("font-size", "280");
+        textElement2.setAttribute("font-size", "650");
         textElement2.textContent = initialNumber;
         svgElement.appendChild(textElement2);
 
         if (uploadedFile) {
             let imageElement = document.createElementNS("http://www.w3.org/2000/svg", "image");
             imageElement.setAttribute("x", "35%");
-            imageElement.setAttribute("y", "60%");
+            imageElement.setAttribute("y", "40%");
             imageElement.setAttribute("width", "500px");
             imageElement.setAttribute("height", "500px");
             imageElement.setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", uploadedFile);
@@ -350,7 +350,7 @@ export const FemMaxiSVG = (text, uploadedFile, initialNumber, typeRecording) => 
         textElement.textContent = text;
         textElement.style.fill = "black";
         textElement.style.fontWeight = "bold";
-        textElement.style.fontSize = "96px";
+        textElement.style.fontSize = "150px";
         textElement.id = 'textoCurvadoFemea';
         div.appendChild(textElement);
         foreignObject.appendChild(div);
@@ -358,19 +358,19 @@ export const FemMaxiSVG = (text, uploadedFile, initialNumber, typeRecording) => 
 
         let textElement2 = document.createElementNS("http://www.w3.org/2000/svg", "text");
         textElement2.setAttribute("x", "50%");
-        textElement2.setAttribute("y", "91%");
+        textElement2.setAttribute("y", "85%");
         textElement2.setAttribute("dominant-baseline", "middle");
         textElement2.setAttribute("text-anchor", "middle");
         textElement2.setAttribute("fill", "black");
         textElement2.setAttribute("font-weight", "bold");
-        textElement2.setAttribute("font-size", "280");
+        textElement2.setAttribute("font-size", "650");
         textElement2.textContent = initialNumber;
         svgElement.appendChild(textElement2);
 
         if (uploadedFile) {
             let imageElement = document.createElementNS("http://www.w3.org/2000/svg", "image");
             imageElement.setAttribute("x", "35%");
-            imageElement.setAttribute("y", "60%");
+            imageElement.setAttribute("y", "40%");
             imageElement.setAttribute("width", "500px");
             imageElement.setAttribute("height", "500px");
             imageElement.setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", uploadedFile);
@@ -501,7 +501,7 @@ export const FemMediaSVG = (text, uploadedFile, initialNumber, typeRecording) =>
         textElement.textContent = text;
         textElement.style.fill = "black";
         textElement.style.fontWeight = "bold";
-        textElement.style.fontSize = "96px";
+        textElement.style.fontSize = "150px";
         textElement.id = 'textoCurvadoFemea';
         div.appendChild(textElement);
         foreignObject.appendChild(div);
@@ -509,19 +509,19 @@ export const FemMediaSVG = (text, uploadedFile, initialNumber, typeRecording) =>
 
         let textElement2 = document.createElementNS("http://www.w3.org/2000/svg", "text");
         textElement2.setAttribute("x", "50%");
-        textElement2.setAttribute("y", "91%");
+        textElement2.setAttribute("y", "85%");
         textElement2.setAttribute("dominant-baseline", "middle");
         textElement2.setAttribute("text-anchor", "middle");
         textElement2.setAttribute("fill", "black");
         textElement2.setAttribute("font-weight", "bold");
-        textElement2.setAttribute("font-size", "280");
+        textElement2.setAttribute("font-size", "650");
         textElement2.textContent = initialNumber;
         svgElement.appendChild(textElement2);
 
         if (uploadedFile) {
             let imageElement = document.createElementNS("http://www.w3.org/2000/svg", "image");
             imageElement.setAttribute("x", "42%");
-            imageElement.setAttribute("y", "62%");
+            imageElement.setAttribute("y", "42%");
             imageElement.setAttribute("width", "280px");
             imageElement.setAttribute("height", "280px");
             imageElement.setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", uploadedFile);
@@ -670,7 +670,7 @@ export const FemOvinoCaprinoSVG = (text, uploadedFile, initialNumber, typeRecord
         textElement.textContent = text;
         textElement.style.fill = "black";
         textElement.style.fontWeight = "bold";
-        textElement.style.fontSize = "96px";
+        textElement.style.fontSize = "150px";
         textElement.id = 'textoCurvadoFemea';
         div.appendChild(textElement);
         foreignObject.appendChild(div);
@@ -678,19 +678,19 @@ export const FemOvinoCaprinoSVG = (text, uploadedFile, initialNumber, typeRecord
 
         let textElement2 = document.createElementNS("http://www.w3.org/2000/svg", "text");
         textElement2.setAttribute("x", "50%");
-        textElement2.setAttribute("y", "91%");
+        textElement2.setAttribute("y", "85%");
         textElement2.setAttribute("dominant-baseline", "middle");
         textElement2.setAttribute("text-anchor", "middle");
         textElement2.setAttribute("fill", "black");
         textElement2.setAttribute("font-weight", "bold");
-        textElement2.setAttribute("font-size", "280");
+        textElement2.setAttribute("font-size", "650");
         textElement2.textContent = initialNumber;
         svgElement.appendChild(textElement2);
 
         if (uploadedFile) {
             let imageElement = document.createElementNS("http://www.w3.org/2000/svg", "image");
             imageElement.setAttribute("x", "42%");
-            imageElement.setAttribute("y", "62%");
+            imageElement.setAttribute("y", "42%");
             imageElement.setAttribute("width", "280px");
             imageElement.setAttribute("height", "280px");
             imageElement.setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", uploadedFile);
@@ -917,88 +917,79 @@ export const FemSuinoOvinoSVG = (text, uploadedFile, initialNumber, typeRecordin
     svgElement.setAttribute("viewBox", "0 0 1477 1640");
     svgElement.setAttribute("fill", "none");
 
-    // Adicionar os elementos com filtro
-    for (let i = 0; i < 4; i++) {
-        let shape;
+    // Adicionar os caminhos
+    let path1 = document.createElementNS("http://www.w3.org/2000/svg", "path");
+    path1.setAttribute("d", "M738.389 0V1041.52V1640H77.7251C21.763 1621.35 2.59084 1575.23 0 1554.5V1041.52L738.389 0Z");
+    path1.setAttribute("fill", "#1A95D3");
+    svgElement.appendChild(path1);
+
+    let path2 = document.createElementNS("http://www.w3.org/2000/svg", "path");
+    path2.setAttribute("d", "M738.389 0V1041.52V1640H1399.05C1455.01 1621.35 1474.19 1575.23 1476.78 1554.5V1041.52L738.389 0Z");
+    path2.setAttribute("fill", "#1A95D3");
+    svgElement.appendChild(path2);
+
+    // Adicionar os círculos
+    for (let i = 0; i < 3; i++) {
+        let circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+        circle.setAttribute("cx", "746.16");
+        circle.setAttribute("cy", "295.355");
+        circle.setAttribute("fill", i === 2 ? "#646464" : "#1A95D3");
         switch (i) {
             case 0:
+                circle.setAttribute("r", "295.355");
+                break;
             case 1:
-                shape = document.createElementNS("http://www.w3.org/2000/svg", "circle");
-                shape.setAttribute("cx", "746.16");
-                shape.setAttribute("cy", "295.355");
-                shape.setAttribute("fill", i === 3 ? "#1A95D3" : "#646464");
-                switch (i) {
-                    case 0:
-                        shape.setAttribute("r", "295.355");
-                        break;
-                    case 1:
-                        shape.setAttribute("r", "264.265");
-                        break;
-                    default:
-                        break;
-                }
+                circle.setAttribute("r", "264.265");
                 break;
             case 2:
-                shape = document.createElementNS("http://www.w3.org/2000/svg", "path");
-                shape.setAttribute("d", "M668.439 295.356C668.439 364.039 814.846 419.716 746.164 419.716C668.439 435.262 614.031 371.811 614.031 303.129C614.031 234.447 677.482 170.996 746.164 170.996C814.846 170.996 668.439 226.674 668.439 295.356Z");
-                shape.setAttribute("fill", "#646464");
-                break;
-            case 3:
-                shape = document.createElementNS("http://www.w3.org/2000/svg", "ellipse");
-                shape.setAttribute("cx", "761.704");
-                shape.setAttribute("cy", "295.356");
-                shape.setAttribute("rx", "124.36");
-                shape.setAttribute("ry", "124.36");
-                shape.setAttribute("fill", "#1A95D3");
-                break;
+                let path3 = document.createElementNS("http://www.w3.org/2000/svg", "path");
+                path3.setAttribute("d", "M668.439 295.356C668.439 364.039 814.846 419.716 746.164 419.716C668.439 435.262 614.031 371.811 614.031 303.129C614.031 234.447 677.482 170.996 746.164 170.996C814.846 170.996 668.439 226.674 668.439 295.356Z");
+                path3.setAttribute("fill", "#646464");
+                svgElement.appendChild(path3);
+                continue;
             default:
                 break;
         }
-        svgElement.appendChild(shape);
+        svgElement.appendChild(circle);
     }
 
-    // Adicionar texto com base na condição
-    if (typeRecording != '' && typeRecording != 5) {
-        let foreignObject = document.createElementNS("http://www.w3.org/2000/svg", "foreignObject");
-        foreignObject.setAttribute("x", "0");
-        foreignObject.setAttribute("y", "0");
-        foreignObject.setAttribute("width", "100%");
-        foreignObject.setAttribute("height", "100%");
+    // Adicionar o elipse
+    let ellipse = document.createElementNS("http://www.w3.org/2000/svg", "ellipse");
+    ellipse.setAttribute("cx", "761.704");
+    ellipse.setAttribute("cy", "295.356");
+    ellipse.setAttribute("rx", "124.36");
+    ellipse.setAttribute("ry", "124.36");
+    ellipse.setAttribute("fill", "#1A95D3");
+    svgElement.appendChild(ellipse);
 
-        let div = document.createElement("div");
-        div.style.width = "100%";
-        div.style.height = "100%";
-        div.style.display = "flex";
-        div.style.alignItems = "center";
-        div.style.justifyContent = "center";
-        div.style.textAlign = "center";
-
-        let textElement = document.createElement("span");
-        textElement.textContent = text;
-        textElement.style.fill = "black";
-        textElement.style.fontWeight = "bold";
-        textElement.style.fontSize = "96px";
-        textElement.id = 'textoCurvadoFemea';
-        div.appendChild(textElement);
-        foreignObject.appendChild(div);
-        svgElement.appendChild(foreignObject);
+    // Adicionar texto e imagem com base na condição
+    if (typeRecording !== '' && typeRecording !== 5) {
+        let textElement1 = document.createElementNS("http://www.w3.org/2000/svg", "text");
+        textElement1.setAttribute("x", "50%");
+        textElement1.setAttribute("y", "50%");
+        textElement1.setAttribute("dominant-baseline", "middle");
+        textElement1.setAttribute("text-anchor", "middle");
+        textElement1.setAttribute("fill", "black");
+        textElement1.setAttribute("font-weight", "bold");
+        textElement1.setAttribute("font-size", "150");
+        textElement1.textContent = text;
+        svgElement.appendChild(textElement1);
 
         let textElement2 = document.createElementNS("http://www.w3.org/2000/svg", "text");
         textElement2.setAttribute("x", "50%");
-        textElement2.setAttribute("y", "91%");
+        textElement2.setAttribute("y", "85%");
         textElement2.setAttribute("dominant-baseline", "middle");
         textElement2.setAttribute("text-anchor", "middle");
         textElement2.setAttribute("fill", "black");
         textElement2.setAttribute("font-weight", "bold");
-        textElement2.setAttribute("font-size", "280");
+        textElement2.setAttribute("font-size", "650");
         textElement2.textContent = initialNumber;
         svgElement.appendChild(textElement2);
 
-        // Adicionar a imagem se estiver presente
         if (uploadedFile) {
             let imageElement = document.createElementNS("http://www.w3.org/2000/svg", "image");
             imageElement.setAttribute("x", "42%");
-            imageElement.setAttribute("y", "62%");
+            imageElement.setAttribute("y", "42%");
             imageElement.setAttribute("width", "280px");
             imageElement.setAttribute("height", "280px");
             imageElement.setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", uploadedFile);
@@ -1010,17 +1001,23 @@ export const FemSuinoOvinoSVG = (text, uploadedFile, initialNumber, typeRecordin
     let defs = document.createElementNS("http://www.w3.org/2000/svg", "defs");
     svgElement.appendChild(defs);
 
+    // Adicionar os filtros
     for (let i = 0; i < 4; i++) {
         let filter = document.createElementNS("http://www.w3.org/2000/svg", "filter");
         filter.setAttribute("id", `filter${i}_d_2058_982`);
-        filter.setAttribute("x", i === 0 ? "446.805" : "477.898");
-        filter.setAttribute("y", i === 0 ? "0" : "31.0898");
-        filter.setAttribute("width", i === 0 ? "598.711" : "536.531");
-        filter.setAttribute("height", i === 0 ? "598.711" : "536.531");
+        let xValue = i === 2 ? "610.031" : i === 3 ? "612.744" : "446.805";
+        let yValue = i === 2 ? "170.996" : i === 3 ? "149.396" : "0";
+        let widthValue = i === 2 ? "158.469" : i === 3 ? "291.919" : "598.711";
+        let heightValue = i === 2 ? "259.09" : i === 3 ? "291.921" : "598.711";
+        filter.setAttribute("x", xValue);
+        filter.setAttribute("y", yValue);
+        filter.setAttribute("width", widthValue);
+        filter.setAttribute("height", heightValue);
         filter.setAttribute("filterUnits", "userSpaceOnUse");
         filter.setAttribute("color-interpolation-filters", "sRGB");
         defs.appendChild(filter);
 
+        // Adicionar os elementos dentro do filtro
         let feFlood = document.createElementNS("http://www.w3.org/2000/svg", "feFlood");
         feFlood.setAttribute("flood-opacity", "0");
         feFlood.setAttribute("result", "BackgroundImageFix");
@@ -1035,6 +1032,7 @@ export const FemSuinoOvinoSVG = (text, uploadedFile, initialNumber, typeRecordin
 
         let feOffset = document.createElementNS("http://www.w3.org/2000/svg", "feOffset");
         feOffset.setAttribute("dy", i === 3 ? "-3" : "4");
+        if (i === 3) feOffset.setAttribute("dx", "-3");
         filter.appendChild(feOffset);
 
         let feGaussianBlur = document.createElementNS("http://www.w3.org/2000/svg", "feGaussianBlur");

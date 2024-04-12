@@ -54,17 +54,17 @@ function AdicionarEventosNosItensDosForms() {
         LimparSVG();
         AtualizarVisualizacao();
         break;
-      case '1':
+      case '1': // Eletronico
         document.getElementById("especieDropDownDiv").style.display = "none";
-        //document.getElementById("especieDropdown").value = "";
         document.getElementById("opcaoIdentificadorDiv").style.display = "block";
         PreencherTipoMachoDropdown('3');
+        EsconderOuAparecerNumeros("esconder");
         LimparSVG();
         break;
-      case '2':
+      case '2': // Visual/Manejo
         document.getElementById("opcaoIdentificadorDiv").style.display = "none";
-        //document.getElementById("opcaoIdentificadorDropdown").value = "";
         document.getElementById("especieDropDownDiv").style.display = "block";
+        EsconderOuAparecerNumeros("aparecer");
         LimparSVG();
         break;
     }
@@ -191,6 +191,8 @@ function AdicionarEventosNosItensDosForms() {
     const machoSVGContainer = document.querySelector('.macho-cor');
     const svgExistsInMachoDiv = machoSVGContainer.querySelector('svg') != null;
 
+    LimparLogo();
+    
     // Chama as funções apenas se houver um SVG dentro da div macho-cor
     if (svgExistsInMachoDiv) {
       PreencherSVGMacho(corSelecionada);
@@ -248,6 +250,7 @@ function AdicionarEventosNosItensDosForms() {
           const machoSVGContainer = document.querySelector('.macho-cor');
           const svgExistsInMachoDiv = machoSVGContainer.querySelector('svg') != null;
 
+          LimparNomeDaFazenda();
           // Chama as funções apenas se houver um SVG dentro da div macho-cor
           if (svgExistsInMachoDiv) {
             PreencherSVGMacho(corSelecionada);
@@ -264,6 +267,20 @@ function AdicionarEventosNosItensDosForms() {
     }
   });
 }
+
+
+
+function LimparNomeDaFazenda() {
+  nomeFazendaSelecionado = '';
+  document.getElementById("nomeFazendaGravacao").value = "";
+}
+
+function LimparLogo() {
+  logoSelecionado = '';
+  document.getElementById("logoFileUpload").value = "";
+}
+
+
 
 function LimparEDesabilitarDropDownsPosteriores(elementoSelecionado) {
   const dropdowns = [
@@ -959,4 +976,22 @@ function LimparTodosOsCampos() {
   // Limpar SVG e atualizar visualização
   LimparSVG();
   AtualizarVisualizacao();
+}
+
+function EsconderOuAparecerNumeros(opcao) {
+  let numeroInicialEFinalDiv = document.getElementById("numeroInicialEFinalDiv");
+  let numeroInicial = document.getElementById("numeroInicial");
+  let numeroFinal = document.getElementById("numeroFinal");
+
+  switch (opcao) {
+    case 'esconder':
+      numeroFinal.value = '';
+      numeroInicial.value = '';
+      numeroInicialSelecionado = '';
+      numeroInicialEFinalDiv.style.display = 'none';
+      break;
+    case 'aparecer':
+      numeroInicialEFinalDiv.style.display = 'flex';
+      break;
+  }
 }
