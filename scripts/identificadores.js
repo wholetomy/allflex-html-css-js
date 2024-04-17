@@ -268,8 +268,6 @@ function AdicionarEventosNosItensDosForms() {
   });
 }
 
-
-
 function LimparNomeDaFazenda() {
   nomeFazendaSelecionado = '';
   document.getElementById("nomeFazendaGravacao").value = "";
@@ -279,8 +277,6 @@ function LimparLogo() {
   logoSelecionado = '';
   document.getElementById("logoFileUpload").value = "";
 }
-
-
 
 function LimparEDesabilitarDropDownsPosteriores(elementoSelecionado) {
   const dropdowns = [
@@ -894,17 +890,20 @@ function AtualizarVisualizacao() {
   const machoDiv = document.querySelector('.macho-div');
   const femeaDiv = document.querySelector('.femea-div');
   const imagemGado = document.querySelector('.imagem-gado');
+  const mensagemRodape = document.querySelector('#mensagemRodape');
 
   if (!machoCor.innerHTML.trim() && !femeaCor.innerHTML.trim()) {
     // Se tanto macho-cor quanto femea-cor estiverem vazios, mostrar imagem-gado e esconder macho-div e femea-div
     imagemGado.style.display = 'block';
     machoDiv.style.display = 'none';
     femeaDiv.style.display = 'none';
+    mensagemRodape.style.display = 'none';
   } else {
     // Se macho-cor ou femea-cor tiverem algo, mostrar macho-div e femea-div e esconder imagem-gado
     imagemGado.style.display = 'none';
     machoDiv.style.display = 'flex';
     femeaDiv.style.display = 'flex';
+    mensagemRodape.style.display = 'block';
   }
 }
 
