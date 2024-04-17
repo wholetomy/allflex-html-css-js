@@ -173,6 +173,25 @@
 /*FINAL CARRINHO BLOCK*/
 
 /*INICIO TELA DIREITA*/
+.macho-femea-div {
+    width: 100%;
+    display: flex;
+}
+
+@media screen and (max-width: 810px) {
+    .macho-femea-div {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.mensagem-rodape {
+    position: absolute;
+    bottom: 15px;
+    color: #5c3161;
+    font-weight: bold;
+}
+
 .macho-div {
     display: flex;
     flex-direction: column;
@@ -191,6 +210,7 @@
     align-items: center;
     width: 50%;
     position: relative;
+    margin-bottom: 50px;
 }
 
 .femea-div svg {

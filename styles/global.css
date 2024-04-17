@@ -119,6 +119,7 @@ a {
     display: flex;
     justify-content: space-between;
     grid-gap: 15px;
+    position: relative;
 }
 
 @media screen and (max-width: 810px) {

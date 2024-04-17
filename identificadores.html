@@ -86,13 +86,15 @@
                     <div id="numeroInicialEFinalDiv" class='options-div'>
                         <div class='options-div-small'>
                             <span>Número Inicial<span class="required">*</span></span>
-                            <input id="numeroInicial" type="number" maxlength="4" min="0" max="9999" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
+                            <input id="numeroInicial" type="number" maxlength="4" min="0" max="9999"
+                                oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
                         </div>
                         <div class='options-div-small'>
                             <span>Número Final<span class="required">*</span></span>
-                            <input id="numeroFinal" type="number" maxlength="4" min="0" max="9999" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
+                            <input id="numeroFinal" type="number" maxlength="4" min="0" max="9999"
+                                oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
                         </div>
-                    </div>                    
+                    </div>
                     <div class='options-div'>
                         <div class='options-div-long'>
                             <span>Nome da Fazenda para gravação<span class="required">*</span></span>
@@ -114,9 +116,11 @@
                     <div class='options-div'>
                         <div class='options-div-long'>
                             <span>Observação</span>
-                            <textarea id="observacaoTextarea" placeholder='Explique sobre alguma personalização da sua gravação' maxlength="200"></textarea>
+                            <textarea id="observacaoTextarea"
+                                placeholder='Explique sobre alguma personalização da sua gravação'
+                                maxlength="200"></textarea>
                         </div>
-                    </div>                    
+                    </div>
                 </div>
                 <div class='options-div-buttons'>
                     <div class='options-div-small'>
@@ -135,14 +139,23 @@
             </div>
             <div id="paginaRightDiv" class="pagina-right">
                 <img class='imagem-gado' src='./images/identificadores/gado-com-brinco.jpg' alt='ImagemGado' />
-                <div class='macho-div'>
-                    <h1 id="machoLabel">Macho</h1>
-                    <div class='macho-cor'></div>
+
+
+                <div class="macho-femea-div">
+                    <div class='macho-div'>
+                        <h1 id="machoLabel">Macho</h1>
+                        <div class='macho-cor'></div>
+                    </div>
+                    <div class='femea-div'>
+                        <h1>Fêmea</h1>
+                        <div class='femea-cor'></div>
+                    </div>
                 </div>
-                <div class='femea-div'>
-                    <h1>Fêmea</h1>
-                    <div class='femea-cor'></div>
-                </div>
+
+
+
+                <span class="mensagem-rodape">Imagem ilustrativa. Você receberá a arte final por e-mail
+                    (centralallflex@merck.com) para aprovação.</span>
             </div>
             <div id="carrinhoDiv" class="carrinho" style="display: none;">
                 <div class='carrinho-title-div'>
