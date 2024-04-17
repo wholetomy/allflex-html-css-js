@@ -133,7 +133,6 @@ function AdicionarEventosNosItensDosForms() {
     // Chame a função correspondente para preencher o SVG do macho
     PreencherSVGMacho(corSelecionada);
     AtualizarVisualizacao();
-    console.log('macho: ', this.value);
   });
 
   // Adicione o evento de mudança para o dropdown de femea
@@ -155,7 +154,6 @@ function AdicionarEventosNosItensDosForms() {
     //PreencherSVGFemea(this.value);
     PreencherSVGFemea(corSelecionada);
     AtualizarVisualizacao();
-    console.log('femea: ', this.value);
   });
 
   // Adicione o evento de mudança para o dropdown de cores
@@ -241,7 +239,6 @@ function AdicionarEventosNosItensDosForms() {
         }
         const reader = new FileReader();
         reader.readAsDataURL(file);
-        console.log('arquivo:', file)
         reader.onload = function () {
           // Atualiza a variável com o URL do logo
           logoSelecionado = reader.result;

@@ -6,6 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/global.css">
     <link rel="stylesheet" href="./styles/identificadores.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./scripts/jquery.arctext.js"></script>
+    <script src="./scripts/identificadores.js" type="module"></script>
+    <script src="./scripts/global.js"></script>
+    <script src="./scripts/pym.v1.js"></script>
+    <script type="text/javascript">
+        var pymChild = new pym.Child();
+
+        function iframeLoaded() {
+            pymChild.sendHeight();
+        }
+    </script>
     <title>Identificadores Allflex</title>
 </head>
 
@@ -149,7 +161,8 @@
                         <div class='femea-cor'></div>
                     </div>
                 </div>
-                <span id="mensagemRodape" class="mensagem-rodape">Imagem ilustrativa. Você receberá a arte final por e-mail
+                <span id="mensagemRodape" class="mensagem-rodape">Imagem ilustrativa. Você receberá a arte final por
+                    e-mail
                     (centralallflex@merck.com) para aprovação.</span>
             </div>
             <div id="carrinhoDiv" class="carrinho" style="display: none;">
@@ -172,19 +185,6 @@
             </div>
         </div>
     </div>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="./scripts/jquery.arctext.js"></script>
-    <script src="./scripts/identificadores.js" type="module"></script>
-    <script src="./scripts/global.js"></script>
-    <script src="./scripts/pym.v1.js"></script>
-    <script type="text/javascript">
-        var pymChild = new pym.Child();
-
-        function iframeLoaded() {
-            pymChild.sendHeight();
-        }
-    </script>
 </body>
 
 </html>
