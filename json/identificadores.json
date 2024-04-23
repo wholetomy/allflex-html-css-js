@@ -64,18 +64,6 @@
                 "st": 1
             },
             {
-                "cod_macho": 2,
-                "macho": "Médio",
-                "cod_especie": 3,
-                "st": 1
-            },
-            {
-                "cod_macho": 3,
-                "macho": "Grande",
-                "cod_especie": 3,
-                "st": 1
-            },
-            {
                 "cod_macho": 4,
                 "macho": "Pequeno Curto",
                 "cod_especie": 1,
@@ -203,17 +191,17 @@
         "tipo_gravacao": [
             {
                 "cod_tipo_gravacao": 2,
-                "tipo_gravacao": "Fêmea numerada",
+                "tipo_gravacao": "Fêmea somente numerada",
                 "st": 1
             },
             {
                 "cod_tipo_gravacao": 3,
-                "tipo_gravacao": "Fêmea com logo",
+                "tipo_gravacao": "Fêmea somente com logo",
                 "st": 1
             },
             {
                 "cod_tipo_gravacao": 4,
-                "tipo_gravacao": "Macho e fêmea gravados",
+                "tipo_gravacao": "Macho e fêmea gravados (especificar gravação no campo de observação)",
                 "st": 1
             },
             {
@@ -229,6 +217,11 @@
             {
                 "cod_tipo_gravacao": 6,
                 "tipo_gravacao": "Numerado",
+                "st": 1
+            },
+            {
+                "cod_tipo_gravacao": 7,
+                "tipo_gravacao": "Fêmea com logo e numeração",
                 "st": 1
             }
         ],
@@ -376,11 +369,6 @@
                 "cod_tipo_gravacao": 3
             },
             {
-                "cod_depara": 3,
-                "cod_femea": 1,
-                "cod_tipo_gravacao": 4
-            },
-            {
                 "cod_depara": 4,
                 "cod_femea": 2,
                 "cod_tipo_gravacao": 2
@@ -389,11 +377,6 @@
                 "cod_depara": 5,
                 "cod_femea": 2,
                 "cod_tipo_gravacao": 3
-            },
-            {
-                "cod_depara": 6,
-                "cod_femea": 2,
-                "cod_tipo_gravacao": 4
             },
             {
                 "cod_depara": 7,
@@ -529,6 +512,36 @@
                 "cod_depara": 34,
                 "cod_femea": 10,
                 "cod_tipo_gravacao": 6
+            },
+            {
+                "cod_depara": 35,
+                "cod_femea": 3,
+                "cod_tipo_gravacao": 7
+            },
+            {
+                "cod_depara": 36,
+                "cod_femea": 3,
+                "cod_tipo_gravacao": 7
+            },
+            {
+                "cod_depara": 37,
+                "cod_femea": 4,
+                "cod_tipo_gravacao": 7
+            },
+            {
+                "cod_depara": 38,
+                "cod_femea": 5,
+                "cod_tipo_gravacao": 7
+            },
+            {
+                "cod_depara": 39,
+                "cod_femea": 6,
+                "cod_tipo_gravacao": 7
+            },
+            {
+                "cod_depara": 40,
+                "cod_femea": 7,
+                "cod_tipo_gravacao": 7
             }
         ],
         "cores_machos_depara": [

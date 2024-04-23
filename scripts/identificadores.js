@@ -145,9 +145,17 @@ function AdicionarEventosNosItensDosForms() {
     if (this.value === '1' || this.value === '2') {
       // Alterar o nome da opção correspondente no dropdown de tipo de gravação
       const tipoGravacaoDropdown = document.getElementById("tipoGravacaoDropdown");
-      const opcaoFemeaNumerada = tipoGravacaoDropdown.querySelector('option[value="2"]');
-      if (opcaoFemeaNumerada) {
-        opcaoFemeaNumerada.textContent = "Fêmea sem logo";
+      const opcaoFemeaNumerada2 = tipoGravacaoDropdown.querySelector('option[value="2"]');
+      const opcaoFemeaNumerada3 = tipoGravacaoDropdown.querySelector('option[value="3"]');
+
+      if (opcaoFemeaNumerada2) {
+        opcaoFemeaNumerada2.textContent = "Fêmea sem logo (com numeração oficial)";
+        opcaoFemeaNumerada3.textContent = "Fêmea com logo (logo e numeração oficial)";
+      }
+
+      if (opcaoFemeaNumerada3) {
+        opcaoFemeaNumerada2.textContent = "Fêmea sem logo (com numeração oficial)";
+        opcaoFemeaNumerada3.textContent = "Fêmea com logo (logo e numeração oficial)";
       }
     }
     // Chame a função correspondente para preencher o SVG da femea
