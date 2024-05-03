@@ -130,7 +130,6 @@ function atualizarCarrinho() {
     }
 }
 
-
 function handleQuantityChange(index, newQuantity) {
     var carrinhoAcessorios = JSON.parse(localStorage.getItem("carrinhoAcessorios")) || [];
     if (newQuantity <= 0) {
@@ -159,3 +158,34 @@ function handleRemoveItem(index) {
     // Atualiza a exibição do carrinho na página
     atualizarCarrinho();
 }
+
+function RedirecionarParaGravityForm() {
+    // Recuperar os dados do localStorage
+    var carrinhoIdentificadores = JSON.parse(localStorage.getItem('carrinhoIdentificadores'));
+    var carrinhoAcessorios = JSON.parse(localStorage.getItem('carrinhoAcessorios'));
+    
+    // Construir a query string para os dados do carrinho de identificadores
+    var identificadoresQueryString = carrinhoIdentificadores.map(function(identificador) {
+        return Object.keys(identificador)
+            .filter(function(key) { return key !== 'logo' && key !== 'imagem'; })
+            .map(function(key) { return encodeURIComponent(key) + '=' + encodeURIComponent(identificador[key]); })
+            .join('&');
+    }).join('&');
+    
+    // Construir a query string para os dados do carrinho de acessórios
+    var acessoriosQueryString = carrinhoAcessorios.map(function(acessorio) {
+        return Object.keys(acessorio)
+            .filter(function(key) { return key !== 'logo' && key !== 'imagem'; })
+            .map(function(key) { return encodeURIComponent(key) + '=' + encodeURIComponent(acessorio[key]); })
+            .join('&');
+    }).join('&');
+    
+    // Construir a URL com as query strings
+    var url = 'https://site.com/index.html?' +
+              identificadoresQueryString + '&' + acessoriosQueryString;
+    
+    // Redirecionar para a URL
+    //window.location.href = url;
+    console.log(url);
+}
+

@@ -1,92 +1,113 @@
+@font-face {
+    font-family: 'Arboria Black';
+    src: url('Arboria-Black.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Arboria Book 2';
+    src: url('Arboria-Book 2.ttf') format('truetype');
+}
+
+body {
+    background-image: url(../images/inicio/kv.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position-y: center;
+    font-family: 'Arboria Book 2', sans-serif !important;
+}
+
+.bold {
+    font-weight: bold;
+}
+
 .inicio-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     padding: 50px;
     width: 100%;
     height: 100vh;
-    grid-gap: 50px;
+    position: relative;
 }
 
-.left-div {
-    height: 100%;
-    width: 50%;
+.top-things {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
 }
 
-.right-div {
-    height: 100%;
-    width: 50%;
+.frases-div {
+    color: #ffffff;
 }
 
-.texts {
-    width: 75%;
+.frases-p-div {
+    font-size: 36px;
+    margin-bottom: 25px;
 }
 
-h1 {
-    color: #5c3161;
-    font-weight: 700;
-    font-size: 4.5rem;
+.frases-div p:nth-child(5),
+.frases-div p:nth-child(6) {
+    color: #FFD10B;
 }
 
-p {
-    color: #263642;
-    font-size: 16px;
-    font-weight: 500;
-    margin-bottom: 30px;
+.logo-msd {
+    width: 150px;
+}
+
+.bottom-things {
+    width: calc(100% - 100px);
+}
+
+.brinco-div {
+    width: 390px;
+    color: #FFD10B;
+    display: flex;
+    align-items: end;
+    grid-gap: 15px;
+    text-align: end;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+}
+
+.brinco-div img {
+    width: 150px;
 }
 
 button {
-    width: 234px;
-    height: 64px;
+    width: 420px;
+    height: 72px;
     border-radius: 30px;
     color: #ffffff;
     background-color: #009ada;
     outline: none;
     border: none;
     font-weight: 600;
-    font-size: 20px;
+    font-size: 25px;
     cursor: pointer;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
-.big-button {
-    width: 310px;
-}
-
-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 14px;
-}
-
-@media screen and (max-width: 980px) {
+@media screen and (max-width: 510px) {
     .inicio-container {
-        flex-direction: column;
-        height: unset;
-        grid-gap: 25px;
         padding: 25px;
     }
 
-    .left-div {
-        width: 100%;
+    .top-things {
+        flex-direction: column-reverse;
+        align-items: center;
     }
 
-    .right-div {
-        width: 100%;
+    .logo-msd {
+        width: 100px;
+        position: absolute;
+        right: 25px;
     }
 
-    .texts {
+    .brinco-div {
+        right: 25px;
+        bottom: 25px;
+    }
+
+    .frases-p-div {
         text-align: center;
-        width: unset;
-    }
-
-    h1 {
-        font-size: 3rem;
-    }
-
-    button {
-        width: 210px;
-        height: 50px;
     }
 }
