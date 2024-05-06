@@ -108,6 +108,8 @@ button {
     }
 
     .brinco-div {
+        margin-top: 50px;
+        position: unset;
         right: 25px;
         bottom: 25px;
     }
@@ -118,5 +120,9 @@ button {
 
     .frases-div {
         margin-top: 50px;
+    }
+
+    .bottom-things {
+        width: 100%;
     }
 }
