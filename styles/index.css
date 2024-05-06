@@ -91,6 +91,11 @@ button {
         padding: 25px;
     }
 
+    button {
+        width: 380px;
+        height: 64px;
+    }
+
     .top-things {
         flex-direction: column-reverse;
         align-items: center;
@@ -109,5 +114,9 @@ button {
 
     .frases-p-div {
         text-align: center;
+    }
+
+    .frases-div {
+        margin-top: 50px;
     }
 }
