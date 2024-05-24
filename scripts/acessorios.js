@@ -106,7 +106,7 @@ function atualizarCarrinho() {
         acessoriosDiv.innerHTML = "<div class='carrinho-vazio-div'>Carrinho vazio</div>";
     } else {
         // Criar a estrutura HTML para cada item no carrinho
-        carrinhoAcessorios.forEach(function(item, index) {
+        carrinhoAcessorios.forEach(function (item, index) {
             var itemHTML = `
                 <div class="item-carrinho">
                     <div class='left-item'>
@@ -159,33 +159,46 @@ function handleRemoveItem(index) {
     atualizarCarrinho();
 }
 
+function RemoverAcentos(str) {
+    return str.normalize('NFD').replace(/[\u0300-\u036f]/g, "").replace(/ç/g, "c").replace(/Ç/g, "C");
+}
+
 function RedirecionarParaGravityForm() {
     // Recuperar os dados do localStorage
     var carrinhoIdentificadores = JSON.parse(localStorage.getItem('carrinhoIdentificadores'));
     var carrinhoAcessorios = JSON.parse(localStorage.getItem('carrinhoAcessorios'));
-    
+
     // Construir a query string para os dados do carrinho de identificadores
-    var identificadoresQueryString = carrinhoIdentificadores.map(function(identificador) {
+    var identificadoresQueryString = carrinhoIdentificadores.map(function (identificador) {
         return Object.keys(identificador)
-            .filter(function(key) { return key !== 'logo' && key !== 'imagem'; })
-            .map(function(key) { return encodeURIComponent(key) + '=' + encodeURIComponent(identificador[key]); })
+            .filter(function (key) { return key !== 'logo' && key !== 'imagem'; })
+            .map(function (key) {
+                var valor = RemoverAcentos(identificador[key].toString());
+                return encodeURIComponent(key) + '=' + encodeURIComponent(valor);
+            })
             .join('&');
     }).join('&');
-    
+
     // Construir a query string para os dados do carrinho de acessórios
-    var acessoriosQueryString = carrinhoAcessorios.map(function(acessorio) {
+    var acessoriosQueryString = carrinhoAcessorios.map(function (acessorio) {
         return Object.keys(acessorio)
-            .filter(function(key) { return key !== 'logo' && key !== 'imagem'; })
-            .map(function(key) { return encodeURIComponent(key) + '=' + encodeURIComponent(acessorio[key]); })
+            .filter(function (key) { return key !== 'logo' && key !== 'imagem'; })
+            .map(function (key) {
+                var valor = RemoverAcentos(acessorio[key].toString());
+                return encodeURIComponent(key) + '=' + encodeURIComponent(valor);
+            })
             .join('&');
     }).join('&');
-    
+
     // Construir a URL com as query strings
-    var url = 'https://site.com/index.html?' +
-              identificadoresQueryString + '&' + acessoriosQueryString;
-    
+    var url = 'https://br.msd-animal-health.wpcust.com/?page_id=2509&' +
+        identificadoresQueryString + '&' + acessoriosQueryString;
+
+    // Limpar o localStorage
+    localStorage.removeItem('carrinhoIdentificadores');
+    localStorage.removeItem('carrinhoAcessorios');
+
     // Redirecionar para a URL
-    //window.location.href = url;
-    console.log(url);
+    window.location.href = url;
 }
 

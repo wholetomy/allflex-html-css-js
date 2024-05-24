@@ -784,11 +784,23 @@ function CurvarOuDescurvarTexto() {
 /*INICIO FUNÇÕES PARA VALIDAR CARRINHO*/
 // Função para validar os campos antes de adicionar um novo item
 window.ValidarCampos = ValidarCampos;
+
 function ValidarCampos() {
   const camposInvalidos = ValidarCamposObrigatorios();
 
   if (camposInvalidos.length > 0) {
     const mensagem = `Por favor, preencha os campos obrigatórios: ${camposInvalidos.join(", ")}.`;
+    ChamarModal(mensagem);
+  } else {
+    VerificarCarrinhoEAdicionar();
+  }
+}
+
+function VerificarCarrinhoEAdicionar() {
+  const carrinho = JSON.parse(localStorage.getItem('carrinhoIdentificadores')) || [];
+
+  if (carrinho.length >= 5) {
+    const mensagem = 'O limite de itens para adicionar são 5 itens.';
     ChamarModal(mensagem);
   } else {
     AdicionarAoCarrinho();
