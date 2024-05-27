@@ -64,27 +64,28 @@ function handleCloseModal() {
 }
 
 function adicionarItemAoCarrinho(cod_acessorio, acessorio, imagem, descricao) {
-    // Adiciona o item ao carrinho
+    // Obtém o carrinho do localStorage ou inicializa um novo array se não existir
     var carrinhoAcessorios = JSON.parse(localStorage.getItem("carrinhoAcessorios")) || [];
 
     // Verifica se o item já está no carrinho
-    var itemExistente = carrinhoAcessorios.find(item => item.cod_acessorio === cod_acessorio);
+    var itemExistente = carrinhoAcessorios.find(item => item[`cod_acessorio${Object.keys(item)[0].match(/\d+/)[0]}`] === cod_acessorio);
+
     if (itemExistente) {
-        // Se o item já existe, aumenta a quantidade em 1
-        itemExistente.quantidade += 1;
+        // Se o item já existe, incrementa a quantidade em 1
+        itemExistente[`quantidade${Object.keys(itemExistente)[0].match(/\d+/)[0]}`] += 1;
     } else {
         // Caso contrário, adiciona o novo item ao carrinho com quantidade 1
         var novoAcessorio = {
-            cod_acessorio: cod_acessorio,
-            acessorio: acessorio,
-            descricao: descricao,
-            imagem: imagem,
-            quantidade: 1
+            [`cod_acessorio${carrinhoAcessorios.length + 1}`]: cod_acessorio,
+            [`acessorio${carrinhoAcessorios.length + 1}`]: acessorio,
+            [`descricao${carrinhoAcessorios.length + 1}`]: descricao,
+            [`imagem${carrinhoAcessorios.length + 1}`]: imagem,
+            [`quantidade${carrinhoAcessorios.length + 1}`]: 1
         };
         carrinhoAcessorios.push(novoAcessorio);
     }
 
-    // Salva o carrinho no localStorage
+    // Salva o carrinho atualizado no localStorage
     localStorage.setItem("carrinhoAcessorios", JSON.stringify(carrinhoAcessorios));
 
     // Fecha o modal
@@ -92,6 +93,47 @@ function adicionarItemAoCarrinho(cod_acessorio, acessorio, imagem, descricao) {
 
     // Atualiza a exibição do carrinho na página
     atualizarCarrinho();
+    AjustarNumerosNoCarrinho();
+}
+
+function AjustarNumerosNoCarrinho() {
+    const carrinhoAtual = JSON.parse(localStorage.getItem("carrinhoAcessorios"));
+
+    if (carrinhoAtual && carrinhoAtual.length > 0) {
+        const acessoriosExistentes = {};
+
+        // Itera sobre os itens do carrinho para obter os códigos existentes
+        carrinhoAtual.forEach(item => {
+            for (const key in item) {
+                if (key.startsWith('cod_acessorio')) {
+                    acessoriosExistentes[item[key]] = true;
+                }
+            }
+        });
+
+        const novoCarrinho = [];
+        let numero = 1;
+
+        // Atribui números sequenciais aos códigos existentes e atualiza o carrinho
+        carrinhoAtual.forEach(item => {
+            const novoItem = {};
+            for (const key in item) {
+                if (key.startsWith('cod_acessorio')) {
+                    const cod_acessorio = item[key];
+                    if (!(cod_acessorio in novoItem)) {
+                        novoItem[`cod_acessorio${numero}`] = cod_acessorio;
+                        numero++;
+                    }
+                } else {
+                    novoItem[key] = item[key];
+                }
+            }
+            novoCarrinho.push(novoItem);
+        });
+
+        // Atualiza o carrinho no localStorage
+        localStorage.setItem("carrinhoAcessorios", JSON.stringify(novoCarrinho));
+    }
 }
 
 function atualizarCarrinho() {
@@ -110,14 +152,14 @@ function atualizarCarrinho() {
             var itemHTML = `
                 <div class="item-carrinho">
                     <div class='left-item'>
-                        <img class='img' src="${item.imagem}" alt="imagem-acessorio" />
+                        <img class='img' src="${item['imagem' + (index + 1)]}" alt="imagem-acessorio" />
                     </div>
                     <div class='right-item'>
-                        <h3>${item.acessorio}</h3>
+                        <h3>${item['acessorio' + (index + 1)]}</h3>
                         <div class='buttons'>
-                            <div onclick="handleQuantityChange(${index}, ${item.quantidade - 1})">-</div>
-                            <input type="text" value="${item.quantidade}" readOnly />
-                            <div onclick="handleQuantityChange(${index}, ${item.quantidade + 1})">+</div>
+                            <div onclick="handleQuantityChange(${index}, ${item['quantidade' + (index + 1)] - 1})">-</div>
+                            <input type="text" value="${item['quantidade' + (index + 1)]}" readOnly />
+                            <div onclick="handleQuantityChange(${index}, ${item['quantidade' + (index + 1)] + 1})">+</div>
                         </div>
                     </div>
                     <div class='trash-div'>
@@ -132,12 +174,36 @@ function atualizarCarrinho() {
 
 function handleQuantityChange(index, newQuantity) {
     var carrinhoAcessorios = JSON.parse(localStorage.getItem("carrinhoAcessorios")) || [];
+
     if (newQuantity <= 0) {
         // Se a nova quantidade for zero ou negativa, remova o item do carrinho
         carrinhoAcessorios.splice(index, 1);
+
+        // Atualiza os números dos acessórios no localStorage
+        for (let i = index; i < carrinhoAcessorios.length; i++) {
+            const item = carrinhoAcessorios[i];
+            const newItem = {};
+            for (const key in item) {
+                if (key.includes('cod_acessorio')) {
+                    newItem[`cod_acessorio${i + 1}`] = item[key];
+                } else if (key.includes('acessorio')) {
+                    newItem[`acessorio${i + 1}`] = item[key];
+                } else if (key.includes('descricao')) {
+                    newItem[`descricao${i + 1}`] = item[key];
+                } else if (key.includes('imagem')) {
+                    newItem[`imagem${i + 1}`] = item[key];
+                } else if (key.includes('quantidade')) {
+                    newItem[`quantidade${i + 1}`] = item[key];
+                }
+            }
+            carrinhoAcessorios[i] = newItem;
+        }
+
     } else {
         // Caso contrário, atualize a quantidade do item
-        carrinhoAcessorios[index].quantidade = newQuantity;
+        var item = carrinhoAcessorios[index];
+        var cod_acessorio = item[`cod_acessorio${index + 1}`];
+        item[`quantidade${index + 1}`] = newQuantity;
     }
 
     // Salva o carrinho atualizado no localStorage
@@ -145,18 +211,41 @@ function handleQuantityChange(index, newQuantity) {
 
     // Atualiza a exibição do carrinho na página
     atualizarCarrinho();
+    AjustarNumerosNoCarrinho();
 }
 
 function handleRemoveItem(index) {
     var carrinhoAcessorios = JSON.parse(localStorage.getItem("carrinhoAcessorios")) || [];
+
     // Remove o item do carrinho
     carrinhoAcessorios.splice(index, 1);
+
+    // Atualiza os números dos acessórios no localStorage
+    for (let i = index; i < carrinhoAcessorios.length; i++) {
+        const item = carrinhoAcessorios[i];
+        const newItem = {};
+        for (const key in item) {
+            if (key.includes('cod_acessorio')) {
+                newItem[`cod_acessorio${i + 1}`] = item[key];
+            } else if (key.includes('acessorio')) {
+                newItem[`acessorio${i + 1}`] = item[key];
+            } else if (key.includes('descricao')) {
+                newItem[`descricao${i + 1}`] = item[key];
+            } else if (key.includes('imagem')) {
+                newItem[`imagem${i + 1}`] = item[key];
+            } else if (key.includes('quantidade')) {
+                newItem[`quantidade${i + 1}`] = item[key];
+            }
+        }
+        carrinhoAcessorios[i] = newItem;
+    }
 
     // Salva o carrinho atualizado no localStorage
     localStorage.setItem("carrinhoAcessorios", JSON.stringify(carrinhoAcessorios));
 
     // Atualiza a exibição do carrinho na página
     atualizarCarrinho();
+    AjustarNumerosNoCarrinho();
 }
 
 function RemoverAcentos(str) {

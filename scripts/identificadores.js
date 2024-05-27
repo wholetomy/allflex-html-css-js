@@ -515,11 +515,27 @@ function VerificarECriarTabelaCarrinho() {
 
     // Cria um bloco para cada item do carrinho
     carrinhoIdentificadores.forEach((item, index) => {
+      const numeroItem = index + 1;
+
+      const tipo = item[`tipo${numeroItem}`];
+      const opcao = item[`opcao${numeroItem}`];
+      const especie = item[`especie${numeroItem}`];
+      const macho = item[`macho${numeroItem}`];
+      const femea = item[`femea${numeroItem}`];
+      const gravacao = item[`gravacao${numeroItem}`];
+      const cor = item[`cor${numeroItem}`];
+      const quantidade = item[`quantidade${numeroItem}`];
+      const numeroInicial = item[`numeroInicial${numeroItem}`];
+      const numeroFinal = item[`numeroFinal${numeroItem}`];
+      const fazenda = item[`fazenda${numeroItem}`];
+      const logo = item[`logo${numeroItem}`];
+      const observacao = item[`observacao${numeroItem}`];
+
       const carrinhoBlock = document.createElement("div");
       carrinhoBlock.className = "carrinho-block";
 
       // Verifica se há um logo e define o conteúdo correspondente
-      const logoContent = item.logo ? `<img src="${item.logo}" alt="Logo" />` : '<div>Sem logo</div>';
+      const logoContent = logo ? `<img src="${logo}" alt="Logo" />` : '<div>Sem logo</div>';
 
       // Estrutura interna do bloco
       carrinhoBlock.innerHTML = `
@@ -528,57 +544,57 @@ function VerificarECriarTabelaCarrinho() {
               </div>
               <div class="form-line">
                   <span>Tipo:</span>
-                  <span>${item.tipo}</span>
+                  <span>${tipo}</span>
               </div>
               <div class="form-line">
                   <span>Tipo de gravação:</span>
-                  <span>${item.gravacao}</span>
+                  <span>${gravacao}</span>
               </div>
               <div class="form-line-logo-and-form">
                   <div class="logo-div">${logoContent}</div>
                   <div class="forms-div">
                       <div class="form-line">
                           <span>Espécie:</span>
-                          <span>${item.especie}</span>
+                          <span>${especie}</span>
                       </div>
                       <div class="form-line">
                           <span>Macho:</span>
-                          <span>${item.macho}</span>
+                          <span>${macho}</span>
                       </div>
                       <div class="form-line">
                           <span>Fêmea:</span>
-                          <span>${item.femea}</span>
+                          <span>${femea}</span>
                       </div>
                       <div class="form-line">
                           <span>Cor:</span>
-                          <span>${item.cor}</span>
+                          <span>${cor}</span>
                       </div>
                       <div class="form-line">
                           <span>Opção:</span>
-                          <span>${item.opcao}</span>
+                          <span>${opcao}</span>
                       </div>
                       <div class="form-line">
                           <span>Nome da Fazenda:</span>
-                          <span>${item.fazenda}</span>
+                          <span>${fazenda}</span>
                       </div>
                   </div>
               </div>
               <div class="form-line form-line-textarea">
                   <span>Observação</span>
-                  <textarea disabled="true" rows="4">${item.observacao}</textarea>
+                  <textarea disabled="true" rows="4">${observacao}</textarea>
               </div>
               <div class="form-line-same-line">
                   <div class="form-line">
                       <span>Quantidade:</span>
-                      <span>${item.quantidade}</span>
+                      <span>${quantidade}</span>
                   </div>
                   <div class="form-line">
                       <span>Nº Inicial:</span>
-                      <span>${item.numeroInicial}</span>
+                      <span>${numeroInicial}</span>
                   </div>
                   <div class="form-line">
                       <span>Nº Final:</span>
-                      <span>${item.numeroFinal}</span>
+                      <span>${numeroFinal}</span>
                   </div>
               </div>
           `;
@@ -589,6 +605,46 @@ function VerificarECriarTabelaCarrinho() {
   } else {
     // Se o carrinho estiver vazio, exibe a mensagem correspondente
     carrinhoTableDiv.innerHTML = '<div class="carrinho-vazio"><p>O carrinho está vazio</p></div>';
+  }
+}
+
+function AjustarNumerosNoCarrinho() {
+  const carrinhoAtual = JSON.parse(localStorage.getItem("carrinhoIdentificadores"));
+
+  if (carrinhoAtual && carrinhoAtual.length > 0) {
+    const tiposExistentes = {};
+
+    // Itera sobre os itens do carrinho para obter os tipos existentes
+    carrinhoAtual.forEach(item => {
+      for (const key in item) {
+        if (key.startsWith('tipo')) {
+          tiposExistentes[item[key]] = true;
+        }
+      }
+    });
+
+    const novoCarrinho = [];
+
+    // Atribui números sequenciais aos tipos existentes e atualiza o carrinho
+    let numero = 1;
+    carrinhoAtual.forEach(item => {
+      const novoItem = {};
+      for (const key in item) {
+        if (key.startsWith('tipo')) {
+          const tipo = item[key];
+          if (!(tipo in novoItem)) {
+            novoItem[`tipo${numero}`] = tipo;
+            numero++;
+          }
+        } else {
+          novoItem[key] = item[key];
+        }
+      }
+      novoCarrinho.push(novoItem);
+    });
+
+    // Atualiza o carrinho no localStorage
+    localStorage.setItem("carrinhoIdentificadores", JSON.stringify(novoCarrinho));
   }
 }
 
@@ -620,10 +676,47 @@ function RemoveItemFromCart(index) {
     // Remove o item do array de carrinhoIdentificadores
     carrinhoIdentificadores.splice(index, 1);
 
+    // Atualiza os números dos identificadores no localStorage
+    for (let i = index; i < carrinhoIdentificadores.length; i++) {
+      const item = carrinhoIdentificadores[i];
+      const newItem = {};
+      for (const key in item) {
+        if (key.includes('tipo')) {
+          newItem[`tipo${i + 1}`] = item[key];
+        } else if (key.includes('opcao')) {
+          newItem[`opcao${i + 1}`] = item[key];
+        } else if (key.includes('especie')) {
+          newItem[`especie${i + 1}`] = item[key];
+        } else if (key.includes('macho')) {
+          newItem[`macho${i + 1}`] = item[key];
+        } else if (key.includes('femea')) {
+          newItem[`femea${i + 1}`] = item[key];
+        } else if (key.includes('gravacao')) {
+          newItem[`gravacao${i + 1}`] = item[key];
+        } else if (key.includes('cor')) {
+          newItem[`cor${i + 1}`] = item[key];
+        } else if (key.includes('quantidade')) {
+          newItem[`quantidade${i + 1}`] = item[key];
+        } else if (key.includes('numeroInicial')) {
+          newItem[`numeroInicial${i + 1}`] = item[key];
+        } else if (key.includes('numeroFinal')) {
+          newItem[`numeroFinal${i + 1}`] = item[key];
+        } else if (key.includes('fazenda')) {
+          newItem[`fazenda${i + 1}`] = item[key];
+        } else if (key.includes('logo')) {
+          newItem[`logo${i + 1}`] = item[key];
+        } else if (key.includes('observacao')) {
+          newItem[`observacao${i + 1}`] = item[key];
+        }
+      }
+      carrinhoIdentificadores[i] = newItem;
+    }
+
     // Atualize o localStorage com o novo array
     localStorage.setItem("carrinhoIdentificadores", JSON.stringify(carrinhoIdentificadores));
 
     // Atualize a exibição do carrinho
+    AjustarNumerosNoCarrinho();
     VerificarECriarTabelaCarrinho(); // Chama a função para recriar a tabela de carrinho atualizada
     ValidarNotificacoes();
   }
@@ -855,24 +948,28 @@ function AdicionarAoCarrinho() {
   const logo = logoSelecionado || '';
   const observacao = document.querySelector("textarea").value || '';
 
-  const itemCarrinho = {
-    tipo: tipoIdentificador,
-    opcao: opcaoIdentificador !== 'Selecione...' ? opcaoIdentificador : '',
-    especie: especie,
-    macho: macho,
-    femea: femea,
-    gravacao: gravacao,
-    cor: cor,
-    quantidade: quantidade,
-    numeroInicial: numeroInicial,
-    numeroFinal: numeroFinal,
-    fazenda: fazenda,
-    logo: logo,
-    observacao: observacao
-  };
-
   // Verificando se o carrinho já existe no localStorage
   const carrinhoExistente = JSON.parse(localStorage.getItem("carrinhoIdentificadores")) || [];
+  // Obtendo o número do próximo item
+  const numeroItem = carrinhoExistente.length + 1;
+
+  // Criando o item do carrinho com sufixo numérico nas chaves
+  const itemCarrinho = {
+    [`tipo${numeroItem}`]: tipoIdentificador,
+    [`opcao${numeroItem}`]: opcaoIdentificador !== 'Selecione...' ? opcaoIdentificador : '',
+    [`especie${numeroItem}`]: especie,
+    [`macho${numeroItem}`]: macho,
+    [`femea${numeroItem}`]: femea,
+    [`gravacao${numeroItem}`]: gravacao,
+    [`cor${numeroItem}`]: cor,
+    [`quantidade${numeroItem}`]: quantidade,
+    [`numeroInicial${numeroItem}`]: numeroInicial,
+    [`numeroFinal${numeroItem}`]: numeroFinal,
+    [`fazenda${numeroItem}`]: fazenda,
+    [`logo${numeroItem}`]: logo,
+    [`observacao${numeroItem}`]: observacao
+  };
+
   // Adicionando o novo item ao carrinho
   carrinhoExistente.push(itemCarrinho);
   // Atualizando o localStorage com o novo carrinho
@@ -881,6 +978,7 @@ function AdicionarAoCarrinho() {
   VerificarECriarTabelaCarrinho();
   ValidarNotificacoes();
   LimparTodosOsCampos();
+  AjustarNumerosNoCarrinho();
 }
 
 // Função para validar as notificações e atualizar o contador
