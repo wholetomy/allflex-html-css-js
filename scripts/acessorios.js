@@ -280,6 +280,10 @@ function RedirecionarParaGravityForm() {
     }).join('&');
 
     // Construir a URL com as query strings
+    //var url = 'https://br.msd-animal-health.wpcust.com/?page_id=2509&' +
+    //    identificadoresQueryString + '&' + acessoriosQueryString;
+
+    // Construir a URL com as query strings
     var url = 'https://br.msd-animal-health.wpcust.com/finalize-seu-pedido/?' +
         identificadoresQueryString + '&' + acessoriosQueryString;
 
@@ -288,7 +292,7 @@ function RedirecionarParaGravityForm() {
     localStorage.removeItem('carrinhoAcessorios');
 
     // Redirecionar para a URL
-    window.location.href = url;
+    window.top.location.href = url;
 }
 
 
