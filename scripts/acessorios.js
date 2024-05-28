@@ -80,7 +80,7 @@ function adicionarItemAoCarrinho(cod_acessorio, acessorio, imagem, descricao) {
             [`acessorio${carrinhoAcessorios.length + 1}`]: acessorio,
             [`descricao${carrinhoAcessorios.length + 1}`]: descricao,
             [`imagem${carrinhoAcessorios.length + 1}`]: imagem,
-            [`quantidade${carrinhoAcessorios.length + 1}`]: 1
+            [`quantidadeAcessorio${carrinhoAcessorios.length + 1}`]: 1
         };
         carrinhoAcessorios.push(novoAcessorio);
     }
@@ -192,8 +192,8 @@ function handleQuantityChange(index, newQuantity) {
                     newItem[`descricao${i + 1}`] = item[key];
                 } else if (key.includes('imagem')) {
                     newItem[`imagem${i + 1}`] = item[key];
-                } else if (key.includes('quantidade')) {
-                    newItem[`quantidade${i + 1}`] = item[key];
+                } else if (key.includes('quantidadeAcessorio')) {
+                    newItem[`quantidadeAcessorio${i + 1}`] = item[key];
                 }
             }
             carrinhoAcessorios[i] = newItem;
@@ -203,7 +203,7 @@ function handleQuantityChange(index, newQuantity) {
         // Caso contrário, atualize a quantidade do item
         var item = carrinhoAcessorios[index];
         var cod_acessorio = item[`cod_acessorio${index + 1}`];
-        item[`quantidade${index + 1}`] = newQuantity;
+        item[`quantidadeAcessorio${index + 1}`] = newQuantity;
     }
 
     // Salva o carrinho atualizado no localStorage
@@ -233,8 +233,8 @@ function handleRemoveItem(index) {
                 newItem[`descricao${i + 1}`] = item[key];
             } else if (key.includes('imagem')) {
                 newItem[`imagem${i + 1}`] = item[key];
-            } else if (key.includes('quantidade')) {
-                newItem[`quantidade${i + 1}`] = item[key];
+            } else if (key.includes('quantidadeAcessorio')) {
+                newItem[`quantidadeAcessorio${i + 1}`] = item[key];
             }
         }
         carrinhoAcessorios[i] = newItem;
