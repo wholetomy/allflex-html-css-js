@@ -254,8 +254,8 @@ function RemoverAcentos(str) {
 
 function RedirecionarParaGravityForm() {
     // Recuperar os dados do localStorage
-    var carrinhoIdentificadores = JSON.parse(localStorage.getItem('carrinhoIdentificadores'));
-    var carrinhoAcessorios = JSON.parse(localStorage.getItem('carrinhoAcessorios'));
+    var carrinhoIdentificadores = JSON.parse(localStorage.getItem('carrinhoIdentificadores')) || [];
+    var carrinhoAcessorios = JSON.parse(localStorage.getItem('carrinhoAcessorios')) || [];
 
     // Construir a query string para os dados do carrinho de identificadores
     var identificadoresQueryString = carrinhoIdentificadores.map(function (identificador) {
@@ -280,7 +280,7 @@ function RedirecionarParaGravityForm() {
     }).join('&');
 
     // Construir a URL com as query strings
-    var url = 'https://br.msd-animal-health.wpcust.com/?page_id=2509&' +
+    var url = 'https://br.msd-animal-health.wpcust.com/finalize-seu-pedido/?' +
         identificadoresQueryString + '&' + acessoriosQueryString;
 
     // Limpar o localStorage
@@ -290,4 +290,5 @@ function RedirecionarParaGravityForm() {
     // Redirecionar para a URL
     window.location.href = url;
 }
+
 
