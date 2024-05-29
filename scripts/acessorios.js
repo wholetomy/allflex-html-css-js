@@ -157,9 +157,9 @@ function atualizarCarrinho() {
                     <div class='right-item'>
                         <h3>${item['acessorio' + (index + 1)]}</h3>
                         <div class='buttons'>
-                            <div onclick="handleQuantityChange(${index}, ${item['quantidade' + (index + 1)] - 1})">-</div>
-                            <input type="text" value="${item['quantidade' + (index + 1)]}" readOnly />
-                            <div onclick="handleQuantityChange(${index}, ${item['quantidade' + (index + 1)] + 1})">+</div>
+                            <div onclick="handleQuantityChange(${index}, ${item['quantidadeAcessorio' + (index + 1)] - 1})">-</div>
+                            <input type="text" value="${item['quantidadeAcessorio' + (index + 1)]}" readOnly />
+                            <div onclick="handleQuantityChange(${index}, ${item['quantidadeAcessorio' + (index + 1)] + 1})">+</div>
                         </div>
                     </div>
                     <div class='trash-div'>
