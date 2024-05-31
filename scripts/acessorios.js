@@ -72,7 +72,7 @@ function adicionarItemAoCarrinho(cod_acessorio, acessorio, imagem, descricao) {
 
     if (itemExistente) {
         // Se o item já existe, incrementa a quantidade em 1
-        itemExistente[`quantidade${Object.keys(itemExistente)[0].match(/\d+/)[0]}`] += 1;
+        itemExistente[`quantidadeAcessorio${Object.keys(itemExistente)[0].match(/\d+/)[0]}`] += 1;
     } else {
         // Caso contrário, adiciona o novo item ao carrinho com quantidade 1
         var novoAcessorio = {
