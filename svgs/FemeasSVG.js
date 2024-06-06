@@ -66,10 +66,33 @@ export const FemEletHdxFdxSVG = (text, uploadedFile, initialNumber, typeRecordin
         foreignObject.appendChild(div);
         svgElement.appendChild(foreignObject);
 
+        let foreignObject2= document.createElementNS("http://www.w3.org/2000/svg", "foreignObject");
+        foreignObject2.setAttribute("x", "0");
+        foreignObject2.setAttribute("y", "0");
+        foreignObject2.setAttribute("width", "100%");
+        foreignObject2.setAttribute("height", "100%");
+
+        let div2 = document.createElement("div");
+        div2.style.position = "absolute";
+        div2.style.top = "540px";
+        div2.style.width = "100%";
+        div2.style.display = "flex";
+        div2.style.justifyContent = "center";
+
+        let textElement1a8 = document.createElement("span")
+        textElement1a8.textContent = "8 7 6 5 4 3 2 1";
+        textElement1a8.style.fill = "black";
+        textElement1a8.style.fontWeight = "bold";
+        textElement1a8.style.fontSize = "90px";
+        textElement1a8.id = 'textoCurvadoIdentificadorEletronico';
+        div2.appendChild(textElement1a8);
+        foreignObject2.appendChild(div2);
+        svgElement.appendChild(foreignObject2);
+
         if (uploadedFile) {
             let imageElement = document.createElementNS("http://www.w3.org/2000/svg", "image");
             imageElement.setAttribute("x", "42%");
-            imageElement.setAttribute("y", "72%");
+            imageElement.setAttribute("y", "8%");
             imageElement.setAttribute("width", "120px");
             imageElement.setAttribute("height", "120px");
             imageElement.setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", uploadedFile);

@@ -162,6 +162,7 @@ function AdicionarEventosNosItensDosForms() {
     //PreencherSVGFemea(this.value);
     PreencherSVGFemea(corSelecionada);
     AtualizarVisualizacao();
+    CurvarTextoDeIdentificadoresEletronicos();
   });
 
   // Adicione o evento de mudança para o dropdown de cores
@@ -203,6 +204,7 @@ function AdicionarEventosNosItensDosForms() {
     if (svgExistsInMachoDiv) {
       PreencherSVGMacho(corSelecionada);
       PreencherSVGFemea(corSelecionada);
+      CurvarTextoDeIdentificadoresEletronicos();
     }
 
     if (textoCurvado) {
@@ -872,6 +874,12 @@ function CurvarOuDescurvarTexto() {
     textoCurvado = true;
   }
 }
+
+// Função para curvar texto de identificadores eletrônicos
+function CurvarTextoDeIdentificadoresEletronicos() {
+  var $identificadorEletronico = $('#textoCurvadoIdentificadorEletronico');
+  $identificadorEletronico.arctext({ radius: 200, dir: -1});
+}
 /*FINAL FUNÇÕES PARA PREENCHER OS SVGS*/
 
 /*INICIO FUNÇÕES PARA VALIDAR CARRINHO*/
@@ -923,13 +931,17 @@ function ValidarCamposObrigatorios() {
     }
   });
 
+  const tipoGravacaoDropdown = document.getElementById("tipoGravacaoDropdown");
   const nomeFazendaGravacaoInput = document.getElementById("nomeFazendaGravacao");
-  if (!nomeFazendaGravacaoInput.value.trim()) {
+  
+  // Verifica se o dropdown tem um valor diferente de "2" e se o campo de nome da fazenda está vazio
+  if (tipoGravacaoDropdown.value !== "2" && !nomeFazendaGravacaoInput.value.trim()) {
     camposInvalidos.push("Nome da Fazenda para gravação");
   }
 
   return camposInvalidos;
 }
+
 
 // Função para adicionar os itens ao carrinho
 function AdicionarAoCarrinho() {

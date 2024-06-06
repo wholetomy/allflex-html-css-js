@@ -45,7 +45,8 @@ body {
 
 .frases-div p:nth-child(5),
 .frases-div p:nth-child(6) {
-    color: #FFD10B;
+    /* color: #FFD10B; */
+    color: #003d64;
 }
 
 .logo-msd {
