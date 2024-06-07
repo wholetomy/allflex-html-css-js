@@ -91,6 +91,7 @@ function AdicionarEventosNosItensDosForms() {
       PreencherSVGFemea();
       PreencherCoresDropdown('14'); //Macho Grande
       PreencherTipoGravacaoDropdown('4'); //Femea Grande
+      CurvarTextoDeIdentificadoresEletronicos();
 
       const machoDropdown = document.getElementById("tipoMachoDropdown");
       const femeaDropdown = document.getElementById("tipoFemeaDropdown");
@@ -183,6 +184,7 @@ function AdicionarEventosNosItensDosForms() {
     if (svgExistsInMachoDiv) {
       PreencherSVGMacho(corSelecionada);
       PreencherSVGFemea(corSelecionada);
+      CurvarTextoDeIdentificadoresEletronicos();
     }
 
     if (textoCurvado) {
