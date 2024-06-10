@@ -201,7 +201,7 @@ function AdicionarEventosNosItensDosForms() {
     const svgExistsInMachoDiv = machoSVGContainer.querySelector('svg') != null;
 
     LimparLogo();
-    
+
     // Chama as funções apenas se houver um SVG dentro da div macho-cor
     if (svgExistsInMachoDiv) {
       PreencherSVGMacho(corSelecionada);
@@ -880,7 +880,7 @@ function CurvarOuDescurvarTexto() {
 // Função para curvar texto de identificadores eletrônicos
 function CurvarTextoDeIdentificadoresEletronicos() {
   var $identificadorEletronico = $('#textoCurvadoIdentificadorEletronico');
-  $identificadorEletronico.arctext({ radius: 200, dir: -1});
+  $identificadorEletronico.arctext({ radius: 200, dir: -1 });
 }
 /*FINAL FUNÇÕES PARA PREENCHER OS SVGS*/
 
@@ -935,9 +935,9 @@ function ValidarCamposObrigatorios() {
 
   const tipoGravacaoDropdown = document.getElementById("tipoGravacaoDropdown");
   const nomeFazendaGravacaoInput = document.getElementById("nomeFazendaGravacao");
-  
+
   // Verifica se o dropdown tem um valor diferente de "2" e se o campo de nome da fazenda está vazio
-  if (tipoGravacaoDropdown.value !== "2" && !nomeFazendaGravacaoInput.value.trim()) {
+  if (tipoGravacaoDropdown.value !== "2" && !nomeFazendaGravacaoInput.value.trim() && machoSelecionado !== '13') {
     camposInvalidos.push("Nome da Fazenda para gravação");
   }
 
