@@ -948,6 +948,34 @@ function VerificarCarrinhoEAdicionar() {
 
 
 
+  function AtualizarAsteriscosObrigatoriedade() {
+    const tipoGravacaoDropdown = document.getElementById("tipoGravacaoDropdown");
+    const tipoGravacaoValor = tipoGravacaoDropdown.value;
+    const isTipoGravacao5 = tipoGravacaoValor === "5";
+  
+    const numeroInicialSpan = document.querySelector('#numeroInicialEFinalDiv .options-div-small:first-child span.required');
+    const numeroFinalSpan = document.querySelector('#numeroInicialEFinalDiv .options-div-small:nth-child(2) span.required');
+    const nomeFazendaSpan = document.querySelector('#nomeFazendaDiv span.required');
+  
+    if (isTipoGravacao5) {
+      numeroInicialSpan.style.display = 'none';
+      numeroFinalSpan.style.display = 'none';
+      nomeFazendaSpan.style.display = 'none';
+    } else {
+      numeroInicialSpan.style.display = 'inline';
+      numeroFinalSpan.style.display = 'inline';
+      nomeFazendaSpan.style.display = 'inline';
+    }
+  }
+  
+  // Chame essa função sempre que o dropdown for alterado
+  document.getElementById("tipoGravacaoDropdown").addEventListener("change", AtualizarAsteriscosObrigatoriedade);
+  
+  
+  // Chame essa função sempre que o dropdown for alterado
+  document.getElementById("tipoGravacaoDropdown").addEventListener("change", AtualizarAsteriscosObrigatoriedade);
+  
+  
   function ValidarCamposObrigatorios() {
     const camposObrigatorios = document.querySelectorAll('.required');
     let camposInvalidos = [];
@@ -989,6 +1017,9 @@ function VerificarCarrinhoEAdicionar() {
     return camposInvalidos;
   }
   
+  // Atualize os asteriscos na inicialização
+  AtualizarAsteriscosObrigatoriedade();
+  
 
 
 
@@ -1003,7 +1034,7 @@ function VerificarCarrinhoEAdicionar() {
 
 
 
-
+  
 
 
 // Função para adicionar os itens ao carrinho
