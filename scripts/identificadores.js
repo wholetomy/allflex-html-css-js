@@ -911,7 +911,7 @@ function VerificarCarrinhoEAdicionar() {
 }
 
 // Função para validar os campos obrigatórios
-function ValidarCamposObrigatorios() {
+/* function ValidarCamposObrigatorios() {
   const camposObrigatorios = document.querySelectorAll('.required');
   let camposInvalidos = [];
 
@@ -942,7 +942,68 @@ function ValidarCamposObrigatorios() {
   }
 
   return camposInvalidos;
-}
+} */
+
+
+
+
+
+  function ValidarCamposObrigatorios() {
+    const camposObrigatorios = document.querySelectorAll('.required');
+    let camposInvalidos = [];
+  
+    const tipoGravacaoDropdown = document.getElementById("tipoGravacaoDropdown");
+    const tipoGravacaoValor = tipoGravacaoDropdown.value;
+    const isTipoGravacao5 = tipoGravacaoValor === "5";
+  
+    camposObrigatorios.forEach(campo => {
+      const span = campo.parentElement;
+      const optionsDiv = span.parentElement.parentElement;
+      const input = span.nextElementSibling;
+  
+      if (isTipoGravacao5 && (input.id === 'numeroInicial' || input.id === 'numeroFinal' || input.id === 'nomeFazendaGravacao')) {
+        // Se tipoGravacaoDropdown.value for igual a 5, ignore esses campos
+        return;
+      }
+  
+      if (window.getComputedStyle(optionsDiv).display !== 'none') {
+        if (input.tagName === 'INPUT') {
+          if (!input.value.trim()) {
+            camposInvalidos.push(span.textContent.replace('*', ''));
+          }
+        } else if (input.tagName === 'SELECT') {
+          if (!input.value.trim() || input.value === '') {
+            camposInvalidos.push(span.textContent.replace('*', ''));
+          }
+        }
+      }
+    });
+  
+    const nomeFazendaGravacaoInput = document.getElementById("nomeFazendaGravacao");
+  
+    // Verifica se o dropdown tem um valor diferente de "2" e se o campo de nome da fazenda está vazio, exceto quando tipoGravacaoDropdown.value for igual a 5
+    if (!isTipoGravacao5 && tipoGravacaoDropdown.value !== "2" && !nomeFazendaGravacaoInput.value.trim() && machoSelecionado !== '13') {
+      camposInvalidos.push("Nome da Fazenda para gravação");
+    }
+  
+    return camposInvalidos;
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // Função para adicionar os itens ao carrinho

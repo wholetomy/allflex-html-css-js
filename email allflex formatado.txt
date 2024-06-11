@@ -1,0 +1,148 @@
+Olá,
+
+Temos um novo orçamento!
+
+
+
+
+Dados do cliente: 
+
+Já é cliente Allflex?: {Já é cliente Allflex?:4}
+
+CPF/CNPJ: {Digite seu CNPJ/CPF:1}
+
+Inscrição Estadual: {Inscrição Estadual:3}
+
+Email: {Digite seu e-mail:7}
+
+Nome da Fazenda: {Nome da fazenda:5}
+
+Telefone: {Digite seu telefone:6}
+
+Aceito receber mais informações sobre meu orçamento e novidades da MSD Saúde Animal via WhatsApp e E-mail: {Aceito receber mais informações sobre meu orçamento e novidades da MSD Saúde Animal via WhatsApp e E-mail:18}
+
+
+
+
+Dados do pedido: 
+
+{if:20}
+Tipo de Identificador: {tipo1:20}
+Opção de Identificador: {opcao1:25}
+Espécie: {especie1:30}
+Macho: {macho1:35}
+Fêmea: {femea1:40}
+Tipo de Gravação: {gravacao1:45}
+Cor: {cor1:50}
+Quantidade: {quantidade1:55}
+Número Inicial: {numeroInicial1:60}
+Número Final: {numeroFinal1:65}
+Nome da Fazenda: {fazenda1:70}
+Observação: {observacao1:75}
+{/if:20}
+
+{if:21}
+Tipo de Identificador: {tipo2:21}
+Opção de Identificador: {opcao2:26}
+Espécie: {especie2:31}
+Macho: {macho2:36}
+Fêmea: {femea2:41}
+Tipo de Gravação: {gravacao2:46}
+Cor: {cor2:51}
+Quantidade: {quantidade2:56}
+Número Inicial: {numeroInicial2:61}
+Número Final: {numeroFinal2:66}
+Nome da Fazenda: {fazenda2:71}
+Observação: {observacao2:76}
+{/if:21}
+
+{if:22}
+Tipo de Identificador: {tipo3:22}
+Opção de Identificador: {opcao3:27}
+Espécie: {especie3:32}
+Macho: {macho3:37}
+Fêmea: {femea3:42}
+Tipo de Gravação: {gravacao3:47}
+Cor: {cor3:52}
+Quantidade: {quantidade3:57}
+Número Inicial: {numeroInicial3:62}
+Número Final: {numeroFinal3:67}
+Nome da Fazenda: {fazenda3:72}
+Observação: {observacao3:77}
+{/if:22}
+
+{if:23}
+Tipo de Identificador: {tipo4:23}
+Opção de Identificador: {opcao4:28}
+Espécie: {especie4:33}
+Macho: {macho4:38}
+Fêmea: {femea4:43}
+Tipo de Gravação: {gravacao4:48}
+Cor: {cor4:53}
+Quantidade: {quantidade4:58}
+Número Inicial: {numeroInicial4:63}
+Número Final: {numeroFinal4:68}
+Nome da Fazenda: {fazenda4:73}
+Observação: {observacao4:78}
+{/if:23}
+
+{if:24}
+Tipo de Identificador: {tipo5:24}
+Opção de Identificador: {opcao5:29}
+Espécie: {especie5:34}
+Macho: {macho5:39}
+Fêmea: {femea5:44}
+Tipo de Gravação: {gravacao5:49}
+Cor: {cor5:54}
+Quantidade: {quantidade5:59}
+Número Inicial: {numeroInicial5:64}
+Número Final: {numeroFinal5:69}
+Nome da Fazenda: {fazenda5:74}
+Observação: {observacao5:79}
+{/if:24}
+
+{if:80}
+
+Acessorios
+Nome: {acessorio1:80} || QTD: {quantidadeAcessorio1:91}
+{/if:80}
+
+{if:81}
+Nome: {acessorio2:81} || QTD: {quantidadeAcessorio2:92}
+{/if:81}
+
+{if:82}
+Nome: {acessorio3:82} || QTD: {quantidadeAcessorio3:93}
+{/if:82}
+
+{if:83}
+Nome: {acessorio4:83} || QTD: {quantidadeAcessorio4:94}
+{/if:83}
+
+{if:84}
+Nome: {acessorio5:84} || QTD: {quantidadeAcessorio5:95}
+{/if:84}
+
+{if:85}
+Nome: {acessorio6:85} || QTD: {quantidadeAcessorio6:96}
+{/if:85}
+
+{if:86}
+Nome: {acessorio7:86} || QTD: {quantidadeAcessorio7:97}
+{/if:86}
+
+{if:87}
+Nome: {acessorio8:87} || QTD: {quantidadeAcessorio8:98}
+{/if:87}
+
+{if:88}
+Nome: {acessorio9:88} || QTD: {quantidadeAcessorio9:99}
+{/if:88}
+
+{if:89}
+Nome: {acessorio10:89} || QTD: {quantidadeAcessorio10:100}
+{/if:89}
+
+{if:90}
+Nome: {acessorio11:90} || QTD: {quantidadeAcessorio11:101}
+{/if:90}
