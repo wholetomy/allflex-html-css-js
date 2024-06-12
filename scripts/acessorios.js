@@ -284,7 +284,7 @@ function RedirecionarParaGravityForm() {
     //    identificadoresQueryString + '&' + acessoriosQueryString;
 
     // Construir a URL com as query strings
-    var url = 'https://br.msd-animal-health.wpcust.com/finalize-seu-pedido/?' +
+    var url = 'http://www.msd-saude-animal.com.br/comprarallflexfinalizacao/?' +
         identificadoresQueryString + '&' + acessoriosQueryString;
 
     // Limpar o localStorage
