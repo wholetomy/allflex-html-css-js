@@ -264,6 +264,7 @@ function AdicionarEventosNosItensDosForms() {
           if (svgExistsInMachoDiv) {
             PreencherSVGMacho(corSelecionada);
             PreencherSVGFemea(corSelecionada);
+            CurvarTextoDeIdentificadoresEletronicos();
           }
 
           if (textoCurvado) {
@@ -933,11 +934,7 @@ function AtualizarAsteriscosObrigatoriedade() {
 // Chame essa função sempre que o dropdown for alterado
 document.getElementById("tipoGravacaoDropdown").addEventListener("change", AtualizarAsteriscosObrigatoriedade);
 
-
-// Chame essa função sempre que o dropdown for alterado
-document.getElementById("tipoGravacaoDropdown").addEventListener("change", AtualizarAsteriscosObrigatoriedade);
-
-function ValidarCamposObrigatorios() {
+/* function ValidarCamposObrigatorios() {
   const camposObrigatorios = document.querySelectorAll('.required');
   let camposInvalidos = [];
 
@@ -976,27 +973,62 @@ function ValidarCamposObrigatorios() {
   }
 
   return camposInvalidos;
-}
+} */
 
-// Atualize os asteriscos na inicialização
+  function ValidarCamposObrigatorios() {
+    const camposObrigatorios = document.querySelectorAll('.required');
+    let camposInvalidos = [];
+  
+    const tipoGravacaoDropdown = document.getElementById("tipoGravacaoDropdown");
+    const tipoGravacaoValor = tipoGravacaoDropdown.value;
+    const isTipoGravacao5 = tipoGravacaoValor === "5";
+  
+    const nomeFazendaGravacaoInput = document.getElementById("nomeFazendaGravacao");
+  
+    const valoresNaoPermitidos = ["2", "5", "6" ]; // Adicione os valores aqui conforme necessário
+  
+    camposObrigatorios.forEach(campo => {
+      const span = campo.parentElement;
+      const optionsDiv = span.parentElement.parentElement;
+      const input = span.nextElementSibling;
+  
+      if (isTipoGravacao5 && (input.id === 'numeroInicial' || input.id === 'numeroFinal' || input.id === 'nomeFazendaGravacao')) {
+        // Se tipoGravacaoDropdown.value for igual a 5, ignore esses campos
+        return;
+      }
+  
+      if (window.getComputedStyle(optionsDiv).display !== 'none') {
+        if (input.tagName === 'INPUT') {
+          if (!input.value.trim()) {
+            camposInvalidos.push(span.textContent.replace('*', ''));
+          }
+        } else if (input.tagName === 'SELECT') {
+          if (!input.value.trim() || input.value === '') {
+            camposInvalidos.push(span.textContent.replace('*', ''));
+          }
+        }
+      }
+    });
+  
+    // Verifica se o dropdown tem um valor diferente dos valores não permitidos e se o campo de nome da fazenda está vazio
+    if (!isTipoGravacao5 &&
+      !nomeFazendaGravacaoInput.value.trim() &&
+      !valoresNaoPermitidos.includes(tipoGravacaoDropdown.value) &&
+      machoSelecionado !== '13') {
+      camposInvalidos.push("Nome da Fazenda para gravação");
+    }
+  
+    // Adiciona "Nome da Fazenda para gravação" se logoSelecionado tiver um valor
+    if (logoSelecionado && !nomeFazendaGravacaoInput.value.trim()) {
+      camposInvalidos.push("Nome da Fazenda para gravação");
+    }
+  
+    return camposInvalidos;
+  }
+  
+
+  // Atualize os asteriscos na inicialização
 AtualizarAsteriscosObrigatoriedade();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // Função para adicionar os itens ao carrinho
 function AdicionarAoCarrinho() {
