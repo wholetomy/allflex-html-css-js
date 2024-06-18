@@ -982,6 +982,7 @@ function ValidarCamposObrigatorios() {
   const tipoGravacaoDropdown = document.getElementById("tipoGravacaoDropdown");
   const tipoGravacaoValor = tipoGravacaoDropdown.value;
   const isTipoGravacao5 = tipoGravacaoValor === "5";
+  const istipoGravacao3 = tipoGravacaoValor === "3";
 
   const nomeFazendaGravacaoInput = document.getElementById("nomeFazendaGravacao");
   const logoFileUpload = document.getElementById("logoFileUpload");
@@ -995,6 +996,10 @@ function ValidarCamposObrigatorios() {
 
     if (isTipoGravacao5 && (input.id === 'numeroInicial' || input.id === 'numeroFinal' || input.id === 'nomeFazendaGravacao')) {
       // Se tipoGravacaoDropdown.value for igual a 5, ignore esses campos
+      return;
+    }
+
+    if (istipoGravacao3 && (input.id === 'numeroInicial' || input.id === 'numeroFinal')) {
       return;
     }
 
