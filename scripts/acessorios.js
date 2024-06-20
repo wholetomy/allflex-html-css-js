@@ -280,10 +280,6 @@ function RedirecionarParaGravityForm() {
     }).join('&');
 
     // Construir a URL com as query strings
-    //var url = 'https://br.msd-animal-health.wpcust.com/?page_id=2509&' +
-    //    identificadoresQueryString + '&' + acessoriosQueryString;
-
-    // Construir a URL com as query strings
     var url = 'https://www.msd-saude-animal.com.br/finalize-seu-pedido-allflex/?' +
         identificadoresQueryString + '&' + acessoriosQueryString;
 

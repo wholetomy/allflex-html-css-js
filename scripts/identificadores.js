@@ -889,7 +889,7 @@ function CurvarTextoDeIdentificadoresEletronicos() {
 // Função para validar os campos antes de adicionar um novo item
 window.ValidarCampos = ValidarCampos;
 
-function ValidarCampos() {
+/* function ValidarCampos() {
   const camposInvalidos = ValidarCamposObrigatorios();
 
   if (camposInvalidos.length > 0) {
@@ -898,6 +898,28 @@ function ValidarCampos() {
   } else {
     VerificarCarrinhoEAdicionar();
   }
+} */
+
+  function ValidarCampos() {
+    const camposInvalidos = ValidarCamposObrigatorios();
+    const logoFileUpload = document.getElementById('logoFileUpload');
+    const observacao = document.getElementById('observacaoTextarea').value.trim();
+
+    if (camposInvalidos.length > 0) {
+        const mensagem = `Por favor, preencha os campos obrigatórios: ${camposInvalidos.join(", ")}.`;
+        ChamarModal(mensagem);
+    } else {
+        if (logoFileUpload.files.length > 0) {
+            if (observacao === "") {
+                const mensagem = "Digite no campo de observação o nome da imagem anexada acima ou nome da fazenda para gravação";
+                ChamarModal(mensagem);
+            } else {
+                VerificarCarrinhoEAdicionar();
+            }
+        } else {
+            VerificarCarrinhoEAdicionar();
+        }
+    }
 }
 
 function VerificarCarrinhoEAdicionar() {
