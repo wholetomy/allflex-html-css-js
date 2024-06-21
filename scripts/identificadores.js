@@ -889,44 +889,33 @@ function CurvarTextoDeIdentificadoresEletronicos() {
 // Função para validar os campos antes de adicionar um novo item
 window.ValidarCampos = ValidarCampos;
 
-/* function ValidarCampos() {
+function ValidarCampos() {
   const camposInvalidos = ValidarCamposObrigatorios();
+  const logoFileUpload = document.getElementById('logoFileUpload');
+  const observacao = document.getElementById('observacaoTextarea').value.trim();
 
   if (camposInvalidos.length > 0) {
     const mensagem = `Por favor, preencha os campos obrigatórios: ${camposInvalidos.join(", ")}.`;
     ChamarModal(mensagem);
   } else {
-    VerificarCarrinhoEAdicionar();
-  }
-} */
-
-  function ValidarCampos() {
-    const camposInvalidos = ValidarCamposObrigatorios();
-    const logoFileUpload = document.getElementById('logoFileUpload');
-    const observacao = document.getElementById('observacaoTextarea').value.trim();
-
-    if (camposInvalidos.length > 0) {
-        const mensagem = `Por favor, preencha os campos obrigatórios: ${camposInvalidos.join(", ")}.`;
+    if (logoFileUpload.files.length > 0) {
+      if (observacao === "") {
+        const mensagem = "Digite no campo de observação o nome da imagem anexada acima ou nome da fazenda para gravação";
         ChamarModal(mensagem);
+      } else {
+        VerificarCarrinhoEAdicionar();
+      }
     } else {
-        if (logoFileUpload.files.length > 0) {
-            if (observacao === "") {
-                const mensagem = "Digite no campo de observação o nome da imagem anexada acima ou nome da fazenda para gravação";
-                ChamarModal(mensagem);
-            } else {
-                VerificarCarrinhoEAdicionar();
-            }
-        } else {
-            VerificarCarrinhoEAdicionar();
-        }
+      VerificarCarrinhoEAdicionar();
     }
+  }
 }
 
 function VerificarCarrinhoEAdicionar() {
   const carrinho = JSON.parse(localStorage.getItem('carrinhoIdentificadores')) || [];
 
-  if (carrinho.length >= 5) {
-    const mensagem = 'O limite de itens para adicionar são 5 itens.';
+  if (carrinho.length >= 10) {
+    const mensagem = 'O limite de itens para adicionar são 10 itens.';
     ChamarModal(mensagem);
   } else {
     AdicionarAoCarrinho();
@@ -955,47 +944,6 @@ function AtualizarAsteriscosObrigatoriedade() {
 
 // Chame essa função sempre que o dropdown for alterado
 document.getElementById("tipoGravacaoDropdown").addEventListener("change", AtualizarAsteriscosObrigatoriedade);
-
-/* function ValidarCamposObrigatorios() {
-  const camposObrigatorios = document.querySelectorAll('.required');
-  let camposInvalidos = [];
-
-  const tipoGravacaoDropdown = document.getElementById("tipoGravacaoDropdown");
-  const tipoGravacaoValor = tipoGravacaoDropdown.value;
-  const isTipoGravacao5 = tipoGravacaoValor === "5";
-
-  camposObrigatorios.forEach(campo => {
-    const span = campo.parentElement;
-    const optionsDiv = span.parentElement.parentElement;
-    const input = span.nextElementSibling;
-
-    if (isTipoGravacao5 && (input.id === 'numeroInicial' || input.id === 'numeroFinal' || input.id === 'nomeFazendaGravacao')) {
-      // Se tipoGravacaoDropdown.value for igual a 5, ignore esses campos
-      return;
-    }
-
-    if (window.getComputedStyle(optionsDiv).display !== 'none') {
-      if (input.tagName === 'INPUT') {
-        if (!input.value.trim()) {
-          camposInvalidos.push(span.textContent.replace('*', ''));
-        }
-      } else if (input.tagName === 'SELECT') {
-        if (!input.value.trim() || input.value === '') {
-          camposInvalidos.push(span.textContent.replace('*', ''));
-        }
-      }
-    }
-  });
-
-  const nomeFazendaGravacaoInput = document.getElementById("nomeFazendaGravacao");
-
-  // Verifica se o dropdown tem um valor diferente de "2" e se o campo de nome da fazenda está vazio, exceto quando tipoGravacaoDropdown.value for igual a 5
-  if (!isTipoGravacao5 && tipoGravacaoDropdown.value !== "2" && !nomeFazendaGravacaoInput.value.trim() && machoSelecionado !== '13') {
-    camposInvalidos.push("Nome da Fazenda para gravação");
-  }
-
-  return camposInvalidos;
-} */
 
 function ValidarCamposObrigatorios() {
   const camposObrigatorios = document.querySelectorAll('.required');
