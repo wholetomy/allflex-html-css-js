@@ -260,7 +260,7 @@ function RedirecionarParaGravityForm() {
     // Construir a query string para os dados do carrinho de identificadores
     var identificadoresQueryString = carrinhoIdentificadores.map(function (identificador) {
         return Object.keys(identificador)
-            .filter(function (key) { return key !== 'logo' && key !== 'imagem'; })
+            .filter(function (key) { return !key.startsWith('logo') && key !== 'imagem'; })
             .map(function (key) {
                 var valor = RemoverAcentos(identificador[key].toString());
                 return encodeURIComponent(key) + '=' + encodeURIComponent(valor);
@@ -271,7 +271,7 @@ function RedirecionarParaGravityForm() {
     // Construir a query string para os dados do carrinho de acessórios
     var acessoriosQueryString = carrinhoAcessorios.map(function (acessorio) {
         return Object.keys(acessorio)
-            .filter(function (key) { return key !== 'logo' && key !== 'imagem'; })
+            .filter(function (key) { return !key.startsWith('logo') && key !== 'imagem'; })
             .map(function (key) {
                 var valor = RemoverAcentos(acessorio[key].toString());
                 return encodeURIComponent(key) + '=' + encodeURIComponent(valor);
@@ -290,5 +290,3 @@ function RedirecionarParaGravityForm() {
     // Redirecionar para a URL
     window.top.location.href = url;
 }
-
-

@@ -1039,7 +1039,7 @@ function AdicionarAoCarrinho() {
     [`numeroInicial${numeroItem}`]: numeroInicial,
     [`numeroFinal${numeroItem}`]: numeroFinal,
     [`fazenda${numeroItem}`]: fazenda,
-    [`logo${numeroItem}`]: "",
+    [`logo${numeroItem}`]: logo,
     [`observacao${numeroItem}`]: observacao
   };
 
